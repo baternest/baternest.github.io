@@ -9,26 +9,25 @@ tags:
 
 [Node.js](https://nodejs.org/en/)
 
-### Install hexo
+## Install hexo
 
 ``` bash
 npm install hexo-cli -g
 ```
 
-### Setup Environemt Variables, add node.js to Path
-
-| Variable name | Variable path |
-|:-------------:|:-------------:|
-| node.js       | %APPDATA%\npm |
-| Path          | %node.js%     |
-
-### Clone Github repo and checkuot source branch
+## Clone GitHub repo and checkuot source branch
 
 ``` bash
-git clone git@github.com:Baternest/baternest.github.io.git -b souce --recursie
-
+git clone git@github.com:Baternest/baternest.github.io.git -b source --recursive
+cd baternest.github.io.git
 npm install hexo --save
-npm install hexo-deployer-git --save
+```
+
+## Set author info
+
+``` bash
+git config user.name "Luo ZhengHong"
+git config user.email "baternest@gmail.com"
 ```
 
 ### Create a new post
@@ -37,9 +36,9 @@ npm install hexo-deployer-git --save
 hexo new "My New Post"
 ```
 
-### Deploy the blog
+### Generate and Deploy the blog
 
 ``` bash
-npm i -S hexo-deployer-git
+hexo generate
 hexo deploy
 ```
