@@ -19,13 +19,11 @@ install: # install any dependencies required
   - npm install
 
 script: # run the build script
+
+after_success:
   - sed -i'' "/^ *repo/s~github\.com~${GH_TOKEN}@github.com~" _config.yml
   - hexo deploy -g
 
 branches:
   only:
     - source
-
-env:
-  global:
-    - GH_REF: github.com/Leafney/Leafney.github.io.git      
