@@ -1,0 +1,31 @@
+language: node_js
+
+node_js: stable
+
+cache:
+  apt: true
+  directories:
+    - node_modules
+    - .deploy_git
+
+before_install: # install additional dependencies required
+  - export TZ='Asia/Taipei'
+  - git config --global user.name "Luo ZhengHong" 
+  - git config --global user.email "baternest@gmail.com"  
+
+  - npm install hexo-cli -g
+
+install: # install any dependencies required
+  - npm install
+
+script: # run the build script
+  - sed -i'' "/^ *repo/s~github\.com~${GH_TOKEN}@github.com~" _config.yml
+  - hexo deploy -g
+
+branches:
+  only:
+    - source
+
+env:
+  global:
+    - GH_REF: github.com/Leafney/Leafney.github.io.git      
