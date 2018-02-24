@@ -6,6 +6,7 @@ cache:
   apt: true
   directories:
     - node_modules
+    - .deploy_git
 
 before_install: # install additional dependencies required
   - export TZ='Asia/Taipei'
@@ -19,7 +20,6 @@ install: # install any dependencies required
 
 script: # run the build script
   - sed -i'' "/^ *repo/s~github\.com~${GH_TOKEN}@github.com~" _config.yml
-  - ls -a
   - hexo deploy -g
 
 branches:
