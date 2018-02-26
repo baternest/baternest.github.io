@@ -5,4 +5,6 @@ tags:
 ---
 # Test Post only
 
+##  Test Disqus
+
 {% asset_img "test.jpg" [Image Title] %}
