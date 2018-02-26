@@ -8,7 +8,7 @@
   <entry>
     <title><![CDATA[Environment Setup]]></title>
     <url>%2F2018%2F02%2F22%2FEnvironment-Setup%2F</url>
-    <content type="text"><![CDATA[Setup environment for write down note (Windows)Prerequest Install Git for Windows (Git Bash) Install Node.js (notnecessary, but recommended) Install Visual Studio Code as markdown editor Install hexo (if node.js installed)1npm install hexo-cli -g Clone GitHub repo and checkuot source branch123git clone git@github.com:Baternest/baternest.github.io.git -b source --recursivecd baternest.github.io.gitnpm install hexo --save Set author info12git config user.name "Luo ZhengHong"git config user.email "baternest@gmail.com" Create a new post1hexo new "My New Post" or create markdown file into source/_post folder Just commit and push to GitHub123git addgit commitgit push Trivas-CI]]></content>
+    <content type="text"><![CDATA[Setup environment for write down note (Windows)Prerequisite Install Git for Windows (Git Bash) Install Node.js (not necessary, but recommended) Install Visual Studio Code as markdown editor Install hexo (if node.js installed)1npm install hexo-cli -g Clone GitHub repository and checkout source branch123git clone git@github.com:Baternest/baternest.github.io.git -b source --recursivecd baternest.github.io.gitnpm install hexo --save Set author info12git config user.name "Luo ZhengHong"git config user.email "baternest@gmail.com" Create a new post1hexo new "My New Post" or create markdown file into source/_post folder Just commit and push to GitHub123git addgit commitgit push Travis-CI wll auto generate and deploy to https://baternest.github.io]]></content>
       <categories>
         <category>Blog</category>
       </categories>

@@ -533,18 +533,21 @@
       
         
           
-            <h1 id="Setup-environment-for-write-down-note-Windows"><a href="#Setup-environment-for-write-down-note-Windows" class="headerlink" title="Setup environment for write down note (Windows)"></a>Setup environment for write down note (Windows)</h1><h2 id="Prerequest"><a href="#Prerequest" class="headerlink" title="Prerequest"></a>Prerequest</h2><ul>
-<li>Install <a href="https://git-scm.com/download/win" target="_blank" rel="noopener">Git for Windows</a> (Git Bash)</li>
-<li>Install <a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a> (not<br>necessary, but recommended)</li>
-<li>Install <a href="https://code.visualstudio.com/download" target="_blank" rel="noopener">Visual Studio Code</a> as markdown editor</li>
+            <h1 id="Setup-environment-for-write-down-note-Windows"><a href="#Setup-environment-for-write-down-note-Windows" class="headerlink" title="Setup environment for write down note (Windows)"></a>Setup environment for write down note (Windows)</h1><h2 id="Prerequisite"><a href="#Prerequisite" class="headerlink" title="Prerequisite"></a>Prerequisite</h2><ul>
+<li><p>Install <a href="https://git-scm.com/download/win" target="_blank" rel="noopener">Git for Windows</a> (Git Bash)</p>
+</li>
+<li><p>Install <a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a> (not necessary, but recommended)</p>
+</li>
+<li><p>Install <a href="https://code.visualstudio.com/download" target="_blank" rel="noopener">Visual Studio Code</a> as markdown editor</p>
+</li>
 </ul>
 <h2 id="Install-hexo-if-node-js-installed"><a href="#Install-hexo-if-node-js-installed" class="headerlink" title="Install hexo (if node.js installed)"></a>Install hexo (if node.js installed)</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
-<h2 id="Clone-GitHub-repo-and-checkuot-source-branch"><a href="#Clone-GitHub-repo-and-checkuot-source-branch" class="headerlink" title="Clone GitHub repo and checkuot source branch"></a>Clone GitHub repo and checkuot source branch</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@github.com:Baternest/baternest.github.io.git -b <span class="built_in">source</span> --recursive</span><br><span class="line"><span class="built_in">cd</span> baternest.github.io.git</span><br><span class="line">npm install hexo --save</span><br></pre></td></tr></table></figure>
+<h2 id="Clone-GitHub-repository-and-checkout-source-branch"><a href="#Clone-GitHub-repository-and-checkout-source-branch" class="headerlink" title="Clone GitHub repository and checkout source branch"></a>Clone GitHub repository and checkout source branch</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@github.com:Baternest/baternest.github.io.git -b <span class="built_in">source</span> --recursive</span><br><span class="line"><span class="built_in">cd</span> baternest.github.io.git</span><br><span class="line">npm install hexo --save</span><br></pre></td></tr></table></figure>
 <h2 id="Set-author-info"><a href="#Set-author-info" class="headerlink" title="Set author info"></a>Set author info</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config user.name <span class="string">"Luo ZhengHong"</span></span><br><span class="line">git config user.email <span class="string">"baternest@gmail.com"</span></span><br></pre></td></tr></table></figure>
 <h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 <p>or create markdown file into source/_post folder</p>
 <h3 id="Just-commit-and-push-to-GitHub"><a href="#Just-commit-and-push-to-GitHub" class="headerlink" title="Just commit and push to GitHub"></a>Just commit and push to GitHub</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add</span><br><span class="line">git commit</span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
-<p><a href="https://travis-ci.org/Baternest/baternest.github.io" target="_blank" rel="noopener">Trivas-CI</a></p>
+<p><a href="https://travis-ci.org/Baternest/baternest.github.io" target="_blank" rel="noopener">Travis-CI</a> wll auto generate and deploy to <a href="https://baternest.github.io">https://baternest.github.io</a></p>
 
           
         
