@@ -9,6 +9,7 @@ cache:
 
 before_install: # install additional dependencies required
   - export TZ='Asia/Taipei'
+
   - git config --global user.name "Luo ZhengHong"
   - git config --global user.email "baternest@gmail.com"
 
@@ -19,7 +20,10 @@ install: # install any dependencies required
 
 script: # run the build script
   - git clone https://github.com/Baternest/baternest.github.io.git -b master .deploy_git
+
   - sed -i'' "/^ *repo/s~github\.com~${GH_TOKEN}@github.com~" _config.yml
+  
+  - hexo clean
   - hexo deploy -g
 
 branches:
