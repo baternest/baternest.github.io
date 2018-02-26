@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[Test Post]]></title>
+    <url>%2F2018%2F02%2F23%2FTest-Post%2F</url>
+    <content type="text"><![CDATA[Test Post onlyTest Disqus]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Environment Setup]]></title>
+    <url>%2F2018%2F02%2F22%2FEnvironment-Setup%2F</url>
+    <content type="text"><![CDATA[Windows (Git Bash)Download and Install Node.jsNode.js Install hexo1npm install hexo-cli -g Clone GitHub repo and checkuot source branch123git clone git@github.com:Baternest/baternest.github.io.git -b source --recursivecd baternest.github.io.gitnpm install hexo --save Set author info12git config user.name "Luo ZhengHong"git config user.email "baternest@gmail.com" Create a new post1hexo new "My New Post" Generate and Deploy the blog12hexo generatehexo deploy]]></content>
+  </entry>
+</search>
