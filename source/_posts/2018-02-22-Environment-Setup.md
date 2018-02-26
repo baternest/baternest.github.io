@@ -6,11 +6,12 @@ tags: Hexo
 ---
 # Setup environment for write down note (Windows)
 
-## Prerequest
+## Prerequisite
 
 - Install [Git for Windows](https://git-scm.com/download/win) (Git Bash)
-- Install [Node.js](https://nodejs.org/en/) (not 
-necessary, but recommended)
+
+- Install [Node.js](https://nodejs.org/en/) (not necessary, but recommended)
+
 - Install [Visual Studio Code](https://code.visualstudio.com/download) as markdown editor
 
 ## Install hexo (if node.js installed)
@@ -19,7 +20,7 @@ necessary, but recommended)
 npm install hexo-cli -g
 ```
 
-## Clone GitHub repo and checkuot source branch
+## Clone GitHub repository and checkout source branch
 
 ``` bash
 git clone git@github.com:Baternest/baternest.github.io.git -b source --recursive
@@ -50,4 +51,4 @@ git commit
 git push
 ```
 
-[Trivas-CI](https://travis-ci.org/Baternest/baternest.github.io)
+[Travis-CI](https://travis-ci.org/Baternest/baternest.github.io) wll auto generate and deploy to https://baternest.github.io
