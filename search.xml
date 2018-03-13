@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Cpp explicit]]></title>
+    <url>%2F2018%2F03%2F13%2FCpp-explicit%2F</url>
+    <content type="text"><![CDATA[C++ keyword ‘explicit’Conversions can either be explicit—when the programmer calls for one type to be converted to another, as in a cast or direct initialization—or implicit—when the language or program calls for a different type than the one given by the programmer. MSDN: The explicit keyword and problems with implicit conversion;k(explicit);k(DevLang-C%2B%2B);k(TargetOS-Windows)&amp;rd=true#The%20explicit%20keyword%20and%20problems%20with%20implicit%20conversion) Wikibooks, open books for an open world: More C++ Idioms/Safe bool cppreference.com: explicit 指定符]]></content>
+      <categories>
+        <category>C++</category>
+      </categories>
+      <tags>
+        <tag>Programing</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Test Post]]></title>
     <url>%2F2018%2F02%2F23%2FTest-Post%2F</url>
     <content type="text"><![CDATA[Test Post onlyTest Disqus]]></content>
