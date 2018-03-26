@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Monitor Gerrit server error_log size]]></title>
+    <url>%2F2018%2F03%2F26%2FMonitor-Gerrit-server-error-log-size%2F</url>
+    <content type="text"><![CDATA[Script1234567891011# Checkout error_log sizefile="/home/gerrit2/gerrit-2.14.7/logs/error_log"maxsize=1000 # 1000 kilobytesactualsize=$(du -k "$file" | cut -f1)if [ $actualsize -ge $maxsize ]; then echo size is over $maxsize kilobytes echo "Gerrit error_log size is over $maxsize kilobytes" | mutt -s "Gerrit error_log size warning!" -c baternest@gmail.com exitelse echo size is under $maxsize kilobytesfi Install package12sudo apt-get install msmtpsudo apt-get install mutt Configuration1vi /etc/msmtprc 1234567vi ~/.muttrcset sendmail="/usr/bin/msmtp"set use_from=yesset realname="gerrit2@server.vm"set from=gerrit2@server.vmset envelope_from=yes]]></content>
+      <categories>
+        <category>Script</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[Cpp explicit]]></title>
     <url>%2F2018%2F03%2F13%2FCpp-explicit%2F</url>
     <content type="text"><![CDATA[C++ keyword ‘explicit’Conversions can either be explicit—when the programmer calls for one type to be converted to another, as in a cast or direct initialization—or implicit—when the language or program calls for a different type than the one given by the programmer. MSDN: The explicit keyword and problems with implicit conversion Wikibooks, open books for an open world: More C++ Idioms/Safe bool cppreference.com: explicit 指定符]]></content>
