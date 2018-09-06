@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[upgrade hexo]]></title>
+    <url>%2F2018%2F09%2F06%2Fupgrade-hexo%2F</url>
+    <content type="text"><![CDATA[$ npm outdatedPackage Current Wanted Latest Locationhexo 3.5.0 3.7.1 3.7.1 hexo-sitehexo-server 0.2.2 0.2.2 0.3.3 hexo-site modify package.json version string npm install –save hexo version]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[ubuntu color prompt with __git_ps1]]></title>
     <url>%2F2018%2F09%2F06%2Fubuntu-color-prompt-with-git-ps1%2F</url>
     <content type="text"><![CDATA[1vi ~/.bashrc uncomment this line #force_color_prompt=yes add [\033[35m]$(__git_ps1) PS1=’${debian_chroot:+($debian_chroot)}[\033[01;32m]\u@\h[\033[00m]:[\033[01;34m]\w[\033[35m]$(__git_ps1)[\033[00m]\$ ‘PS1=’${debian_chroot:+($debian_chroot)}[\033[01;32m]\u@\h[\033[00m]:[\033[01;34m]\w [\033[00m]\$ ‘]]></content>
