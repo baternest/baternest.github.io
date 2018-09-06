@@ -1,6 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[ubuntu color prompt with __git_ps1]]></title>
+    <url>%2F2018%2F09%2F06%2Fubuntu-color-prompt-with-git-ps1%2F</url>
+    <content type="text"><![CDATA[1vi ~/.bashrc uncomment this line #force_color_prompt=yes add [\033[35m]$(__git_ps1) PS1=’${debian_chroot:+($debian_chroot)}[\033[01;32m]\u@\h[\033[00m]:[\033[01;34m]\w[\033[35m]$(__git_ps1)[\033[00m]\$ ‘PS1=’${debian_chroot:+($debian_chroot)}[\033[01;32m]\u@\h[\033[00m]:[\033[01;34m]\w [\033[00m]\$ ‘]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[fix Ubuntu KEYEXPIRED error message]]></title>
+    <url>%2F2018%2F09%2F03%2Ffix-Ubuntu-KEYEXPIRED-error-message%2F</url>
+    <content type="text"><![CDATA[1234sudo apt-get updateW: An error occurred during the signature verification. The repository is not updated and the previous index files will be used. GPG error: http://storage.googleapis.com/bazel-apt stable InRelease: The following signatures were invalid: KEYEXPIRED 1527185977 KEYEXPIRED 1527185977 KEYEXPIRED 1527185977W: Failed to fetch http://storage.googleapis.com/bazel-apt/dists/stable/InRelease The following signatures were invalid: KEYEXPIRED 1527185977 KEYEXPIRED 1527185977 KEYEXPIRED 1527185977W: Some index files failed to download. They have been ignored, or old ones used instead. 1234apt-key list | grep expired$ pub 4096R/48457EE0 2016-05-24 [expired: 2018-05-24]sudo apt-key adv --recv-keys --keyserver keys.gnupg.net 48457EE0]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[gerrit project dashboard]]></title>
+    <url>%2F2018%2F08%2F31%2Fgerrit-project-dashboard%2F</url>
+    <content type="text"><![CDATA[Creating Custom Dashboards in Gerrit Gerrit Code Review - Dashboards 12git clone ssh://ZH_Luo@ubuntu:29418/All-Projectscd All-Projects 123456git checkout --orphan custom-dashboardsvim dashboard-file-namegit reset # if needed to make sure other files aren't going to be committedgit add dashboard-file-name # name of the git config file-formatted dashboard filegit commit -m "add dashboard"git push origin custom-dashboards:refs/meta/dashboards/branch_name 1234567[dashboard] title = Default Dashbord description = Most recent open and merged changes.[section "Open Changes"] query = status:open project:$&#123;project&#125; limit:15[section "Merged Changes"] query = status:merged project:$&#123;project&#125; limit:15]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[OpenWrt LEDE]]></title>
+    <url>%2F2018%2F06%2F01%2FOpenWrt-LEDE%2F</url>
+    <content type="text"><![CDATA[To upgrade all of the packages, LEDE recommends,1opkg list-upgradable | cut -f 1 -d &apos; &apos; | xargs opkg upgrade opkg install kmod-usb-storageopkg install usbutilslsusb -t opkg install block-mountblock info | grep “/dev/sd” opkg install kmod-fs-ext4block detect &gt; /etc/config/fstab Install Samba12opkg updateopkg install samba36-server luci-app-samba]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Buffalo WZR-HP-G450H + OpenWrt]]></title>
+    <url>%2F2018%2F05%2F30%2FBuffalo-WZR-HP-G450H-OpenWrt%2F</url>
+    <content type="text"><![CDATA[前言發現有新版的OpenWrt (LEDE 17.01)，更新時未仔細確認一時手殘刷掛機器… 救援參考：Buffalo WZR-HP-G450H 刷 OpenWRT – 比尔盖子 博客 設定802.1X認證(有線網路)http://www.cnblogs.com/kkzxak47/archive/2013/03/16/2961964.html wget https link12# opkg update# opkg install wget wpa_supplicant -B -i eth0.3 -c /etc/wpa_supplicant/wpa_supplicant.conf -D wired udhcpc -i eth0.3 remove wpa-miniinstall wpad luci-app-sambasamba36-server]]></content>
+      <categories>
+        <category>router</category>
+      </categories>
+      <tags>
+        <tag>openwrt</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Windows GitLab Runner]]></title>
+    <url>%2F2018%2F04%2F20%2FWindows-GitLab-Runner%2F</url>
+    <content type="text"><![CDATA[GitLab.org / gitlab-runner · GitLab Install GitLab Runner on WindowsGitLab CI/CD Variables 12345678gitlab-runner install --user ".\ENTER-YOUR-USERNAME" --password "ENTER-YOUR-PASSWORD"gitlab-runner startgitlab-runner register --name zh-runner --url https://ubuntu:8081/gitlab/ --registration-token _8N7_mVwE25etMCvPLGXgitlab-runner unregister --all-runnersgitlab-runner stopgitlab-runner uninstall gitlab-runner register GitLab Runner FAQ | GitLab Manually using Administrative Tools: Go to Control Panel &gt; System and Security &gt; Administrative Tools, open the Local Security Policy tool, chose the Security Settings &gt; Local Policies &gt; User Rights Assignment on the list on the left, open the Log on as a service on the list on the right, click on the Add User or Group… button, add the user (“by hand” or using Advanced… button) and apply the settings.]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[ATL Simple Object Options]]></title>
+    <url>%2F2018%2F04%2F12%2FATL-Simple-Object-Options%2F</url>
+    <content type="text"><![CDATA[OptionsAggregationYes: (NONE)No: DECLARE_NOT_AGGREGATABLE()Only: DECLARE_ONLY_AGGREGATABLE() Interface (IDL Attributes)Dual: dualCustom: (NONE)Custom with Automation compatible: (oleautomation) IDL Attributes Threading modelCComSingleThreadModelSingle: (NONE)Apartment: val ThreadingModel = s ‘Apartment’ CComMultiThreadModelBoth: val ThreadingModel = s ‘Both’ Free-threaded marshaler: CoCreateFreeThreadedMarshaler()Free: val ThreadingModel = s ‘Free’Neutral: val ThreadingModel = s ‘Neutral’]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Ubuntu Server 16.04 in VM for Gerrit server]]></title>
+    <url>%2F2018%2F03%2F29%2FUbuntu-Server-16-04-in-VM-for-Gerrit-server%2F</url>
+    <content type="text"><![CDATA[Install Ubuntu Server 16.04 in VMware Workstation 14 PlayerInstall Packages123sudo apt-get updatesudo apt-get install openssh-serversudo apt-get install open-vm-tools 12sudo mkdir /mnt/hgfssudo vmhgfs-fuse .host:/$(vmware-hgfsclient) /mnt/hgfs/ -o allow_other Mount12vmhgfs-fuse .host:/$(vmware-hgfsclient) ~/some_mountpointsudo mount -t fuse.vmhgfs-fuse .host:/ /mnt/hgfs -o allow_other Mount1.host:/ /mnt/hgfs fuse.vmhgfs-fuse allow_other 0 0 12sudo apt-get install default-jresudo apt-get install apache2 postgresql 123sudo su postgrescreateuser --username=postgres -RDIElPS gerrit2createdb --username=postgres -E UTF-8 -O gerrit2 reviewdb 1java -jar gerrit.war init -d /path/to/your/gerrit_application_directory]]></content>
+      <categories>
+        <category>Ubuntu</category>
+      </categories>
+      <tags>
+        <tag>Server</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Monitor Gerrit server error_log size]]></title>
     <url>%2F2018%2F03%2F26%2FMonitor-Gerrit-server-error-log-size%2F</url>
     <content type="text"><![CDATA[Script1234567891011# Checkout error_log sizefile="/home/gerrit2/gerrit-2.14.7/logs/error_log"maxsize=1000 # 1000 kilobytesactualsize=$(du -k "$file" | cut -f1)if [ $actualsize -ge $maxsize ]; then echo size is over $maxsize kilobytes echo "Gerrit error_log size is over $maxsize kilobytes" | mutt -s "Gerrit error_log size warning!" -c baternest@gmail.com exitelse echo size is under $maxsize kilobytesfi Install package12sudo apt-get install msmtpsudo apt-get install mutt Configuration1vi /etc/msmtprc 1234567vi ~/.muttrcset sendmail="/usr/bin/msmtp"set use_from=yesset realname="gerrit2@server.vm"set from=gerrit2@server.vmset envelope_from=yes]]></content>
