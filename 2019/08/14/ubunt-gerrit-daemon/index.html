@@ -100,28 +100,27 @@
 
 
   
-  <meta name="keywords" content="Hexo,">
+  <meta name="keywords" content="Hexo, NexT">
 
 
-<meta name="description" content="Setup environment for write down note (Windows)Prerequisite Install Git for Windows (Git Bash)  Install Node.js (not necessary, but recommended)  Install Visual Studio Code as markdown editor   Instal">
-<meta name="keywords" content="Hexo">
+<meta name="description" content="$ sudo ln -sfv /srv/gerrit2/bin/gerrit.sh /etc/init.d/gerrit$ sudo update-rc.d -f gerrit remove$ sudo update-rc.d gerrit defaults 92echo “GERRIT_SITE=/srv/gerrti2” &amp;gt; /etc/default/gerritcodereview h">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Environment Setup">
-<meta property="og:url" content="https://baternest.github.io/2018/02/22/Environment-Setup/index.html">
+<meta property="og:title" content="ubunt-gerrit-daemon">
+<meta property="og:url" content="https://baternest.github.io/2019/08/14/ubunt-gerrit-daemon/index.html">
 <meta property="og:site_name" content="Baternest&#39;s blog">
-<meta property="og:description" content="Setup environment for write down note (Windows)Prerequisite Install Git for Windows (Git Bash)  Install Node.js (not necessary, but recommended)  Install Visual Studio Code as markdown editor   Instal">
+<meta property="og:description" content="$ sudo ln -sfv /srv/gerrit2/bin/gerrit.sh /etc/init.d/gerrit$ sudo update-rc.d -f gerrit remove$ sudo update-rc.d gerrit defaults 92echo “GERRIT_SITE=/srv/gerrti2” &amp;gt; /etc/default/gerritcodereview h">
 <meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2019-08-14T08:41:37.014Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Environment Setup">
-<meta name="twitter:description" content="Setup environment for write down note (Windows)Prerequisite Install Git for Windows (Git Bash)  Install Node.js (not necessary, but recommended)  Install Visual Studio Code as markdown editor   Instal">
+<meta name="twitter:title" content="ubunt-gerrit-daemon">
+<meta name="twitter:description" content="$ sudo ln -sfv /srv/gerrit2/bin/gerrit.sh /etc/init.d/gerrit$ sudo update-rc.d -f gerrit remove$ sudo update-rc.d gerrit defaults 92echo “GERRIT_SITE=/srv/gerrti2” &amp;gt; /etc/default/gerritcodereview h">
 
 
 
 
 
 
-  <link rel="canonical" href="https://baternest.github.io/2018/02/22/Environment-Setup/">
+  <link rel="canonical" href="https://baternest.github.io/2019/08/14/ubunt-gerrit-daemon/">
 
 
 
@@ -130,7 +129,7 @@
     sidebar: "",
   };
 </script>
-  <title>Environment Setup | Baternest's blog</title>
+  <title>ubunt-gerrit-daemon | Baternest's blog</title>
   
 
 
@@ -300,7 +299,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://baternest.github.io/2018/02/22/Environment-Setup/">
+    <link itemprop="mainEntityOfPage" href="https://baternest.github.io/2019/08/14/ubunt-gerrit-daemon/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Luo ZhengHong">
@@ -317,7 +316,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Environment Setup</h1>
+          <h1 class="post-title" itemprop="name headline">ubunt-gerrit-daemon</h1>
         
 
         <div class="post-meta">
@@ -329,7 +328,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-22T15:15:40+08:00">2018-02-22</time>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-14T16:19:43+08:00">2019-08-14</time>
             
 
             
@@ -339,24 +338,6 @@
           </span>
 
           
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Blog/" itemprop="url" rel="index"><span itemprop="name">Blog</span></a></span>
-
-                
-                
-              
-            </span>
-          
 
           
             
@@ -365,8 +346,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/02/22/Environment-Setup/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018/02/22/Environment-Setup/" itemprop="commentCount"></span>
+                <a href="/2019/08/14/ubunt-gerrit-daemon/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/08/14/ubunt-gerrit-daemon/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -394,21 +375,8 @@
       
 
       
-        <h1 id="Setup-environment-for-write-down-note-Windows"><a href="#Setup-environment-for-write-down-note-Windows" class="headerlink" title="Setup environment for write down note (Windows)"></a>Setup environment for write down note (Windows)</h1><h2 id="Prerequisite"><a href="#Prerequisite" class="headerlink" title="Prerequisite"></a>Prerequisite</h2><ul>
-<li><p>Install <a href="https://git-scm.com/download/win" target="_blank" rel="noopener">Git for Windows</a> (Git Bash)</p>
-</li>
-<li><p>Install <a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a> (not necessary, but recommended)</p>
-</li>
-<li><p>Install <a href="https://code.visualstudio.com/download" target="_blank" rel="noopener">Visual Studio Code</a> as markdown editor</p>
-</li>
-</ul>
-<h2 id="Install-hexo-if-node-js-installed"><a href="#Install-hexo-if-node-js-installed" class="headerlink" title="Install hexo (if node.js installed)"></a>Install hexo (if node.js installed)</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
-<h2 id="Clone-GitHub-repository-and-checkout-source-branch"><a href="#Clone-GitHub-repository-and-checkout-source-branch" class="headerlink" title="Clone GitHub repository and checkout source branch"></a>Clone GitHub repository and checkout source branch</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@github.com:Baternest/baternest.github.io.git -b <span class="built_in">source</span> --recursive</span><br><span class="line"><span class="built_in">cd</span> baternest.github.io.git</span><br><span class="line">npm install hexo --save</span><br></pre></td></tr></table></figure>
-<h2 id="Set-author-info"><a href="#Set-author-info" class="headerlink" title="Set author info"></a>Set author info</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config user.name <span class="string">"Luo ZhengHong"</span></span><br><span class="line">git config user.email <span class="string">"baternest@gmail.com"</span></span><br></pre></td></tr></table></figure>
-<h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>or create markdown file into source/_post folder</p>
-<h3 id="Just-commit-and-push-to-GitHub"><a href="#Just-commit-and-push-to-GitHub" class="headerlink" title="Just commit and push to GitHub"></a>Just commit and push to GitHub</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add</span><br><span class="line">git commit</span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
-<p><a href="https://travis-ci.org/Baternest/baternest.github.io" target="_blank" rel="noopener">Travis-CI</a> wll auto generate and deploy to <a href="https://baternest.github.io">https://baternest.github.io</a></p>
+        <p>$ sudo ln -sfv /srv/gerrit2/bin/gerrit.sh /etc/init.d/gerrit<br>$ sudo update-rc.d -f gerrit remove<br>$ sudo update-rc.d gerrit defaults 92<br>echo “GERRIT_SITE=/srv/gerrti2” &gt; /etc/default/gerritcodereview</p>
+<p><a href="https://askubuntu.com/questions/721478/ubuntu-init-d-configuration-not-starting-gerrit-2-11-4-at-boot" target="_blank" rel="noopener">https://askubuntu.com/questions/721478/ubuntu-init-d-configuration-not-starting-gerrit-2-11-4-at-boot</a><br><a href="http://jhshi.me/2016/08/10/start-gerrit-server-upon-boot-on-ubuntu/index.html" target="_blank" rel="noopener">http://jhshi.me/2016/08/10/start-gerrit-server-upon-boot-on-ubuntu/index.html</a></p>
 
       
     </div>
@@ -427,12 +395,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/Hexo/" rel="tag"># Hexo</a>
-          
-        </div>
-      
 
       
       
@@ -442,15 +404,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/09/06/upgrade-hexo/" rel="next" title="upgrade hexo">
+                <i class="fa fa-chevron-left"></i> upgrade hexo
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/02/23/Test-Post/" rel="prev" title="Test Post">
-                Test Post <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -509,17 +471,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -620,22 +573,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Setup-environment-for-write-down-note-Windows"><span class="nav-number">1.</span> <span class="nav-text">Setup environment for write down note (Windows)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Prerequisite"><span class="nav-number">1.1.</span> <span class="nav-text">Prerequisite</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Install-hexo-if-node-js-installed"><span class="nav-number">1.2.</span> <span class="nav-text">Install hexo (if node.js installed)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Clone-GitHub-repository-and-checkout-source-branch"><span class="nav-number">1.3.</span> <span class="nav-text">Clone GitHub repository and checkout source branch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Set-author-info"><span class="nav-number">1.4.</span> <span class="nav-text">Set author info</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.4.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Just-commit-and-push-to-GitHub"><span class="nav-number">1.4.2.</span> <span class="nav-text">Just commit and push to GitHub</span></a></li></ol></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
@@ -785,9 +722,9 @@
   
     <script type="text/javascript">
       var disqus_config = function () {
-        this.page.url = 'https://baternest.github.io/2018/02/22/Environment-Setup/';
-        this.page.identifier = '2018/02/22/Environment-Setup/';
-        this.page.title = 'Environment Setup';
+        this.page.url = 'https://baternest.github.io/2019/08/14/ubunt-gerrit-daemon/';
+        this.page.identifier = '2019/08/14/ubunt-gerrit-daemon/';
+        this.page.title = 'ubunt-gerrit-daemon';
       };
       function loadComments () {
         var d = document, s = d.createElement('script');

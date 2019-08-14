@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[ubunt-gerrit-daemon]]></title>
+    <url>%2F2019%2F08%2F14%2Fubunt-gerrit-daemon%2F</url>
+    <content type="text"><![CDATA[$ sudo ln -sfv /srv/gerrit2/bin/gerrit.sh /etc/init.d/gerrit$ sudo update-rc.d -f gerrit remove$ sudo update-rc.d gerrit defaults 92echo “GERRIT_SITE=/srv/gerrti2” &gt; /etc/default/gerritcodereview https://askubuntu.com/questions/721478/ubuntu-init-d-configuration-not-starting-gerrit-2-11-4-at-boothttp://jhshi.me/2016/08/10/start-gerrit-server-upon-boot-on-ubuntu/index.html]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[upgrade hexo]]></title>
     <url>%2F2018%2F09%2F06%2Fupgrade-hexo%2F</url>
     <content type="text"><![CDATA[$ npm outdatedPackage Current Wanted Latest Locationhexo 3.5.0 3.7.1 3.7.1 hexo-sitehexo-server 0.2.2 0.2.2 0.3.3 hexo-site modify package.json version string npm install –save hexo version]]></content>
@@ -28,7 +33,7 @@
   <entry>
     <title><![CDATA[Buffalo WZR-HP-G450H + OpenWrt]]></title>
     <url>%2F2018%2F05%2F30%2FBuffalo-WZR-HP-G450H-OpenWrt%2F</url>
-    <content type="text"><![CDATA[前言發現有新版的OpenWrt (LEDE 17.01)，更新時未仔細確認一時手殘刷掛機器… 救援參考：Buffalo WZR-HP-G450H 刷 OpenWRT – 比尔盖子 博客 設定802.1X認證(有線網路)http://www.cnblogs.com/kkzxak47/archive/2013/03/16/2961964.html wget https link12# opkg update# opkg install wget wpa_supplicant -B -i eth0.3 -c /etc/wpa_supplicant/wpa_supplicant.conf -D wired udhcpc -i eth0.3 remove wpa-miniinstall wpad luci-app-sambasamba36-server]]></content>
+    <content type="text"><![CDATA[前言發現有新版的OpenWrt (LEDE 17.01)，更新時未仔細確認一時手殘刷掛機器… 救援參考：Buffalo WZR-HP-G450H 刷 OpenWRT – 比尔盖子 博客 設定802.1X認證(有線網路)http://www.cnblogs.com/kkzxak47/archive/2013/03/16/2961964.html wget https link12# opkg update# opkg install wget wpa_supplicant -B -i eth0.3 -c /etc/wpa_supplicant/wpa_supplicant.conf -D wired &lt;&lt;&lt;&lt;&lt;&lt;&lt; Updated upstreamwpa_supplicant -B -D wired -i eth0.3 -c /etc/config/wpa.conf Stashed changes udhcpc -i eth0.3 remove wpa-miniinstall wpad luci-app-sambasamba36-server]]></content>
       <categories>
         <category>router</category>
       </categories>
