@@ -23,6 +23,10 @@ http://www.cnblogs.com/kkzxak47/archive/2013/03/16/2961964.html
 ````
 
 wpa_supplicant -B -i eth0.3 -c /etc/wpa_supplicant/wpa_supplicant.conf -D wired
+<<<<<<< Updated upstream
+=======
+wpa_supplicant -B -D wired -i eth0.3 -c /etc/config/wpa.conf 
+>>>>>>> Stashed changes
 
 udhcpc -i eth0.3
 
