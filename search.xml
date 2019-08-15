@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[KeyStore Explorer]]></title>
+    <url>%2F2019%2F08%2F15%2FKeyStore-Explorer%2F</url>
+    <content type="text"><![CDATA[Import self-signed CA into JAVA cacerts fileWindows path: JAVA_PATH\jre\lib\security GUI tool: https://keystore-explorer.org/ https://docs.microsoft.com/zh-tw/azure/java/java-sdk-add-certificate-ca-storekeytool -keystore cacerts -importcert -alias bc2025ca -file bc2025.cerkeytool -list -keystore cacerts]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>cert</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[ubunt-gerrit-daemon]]></title>
     <url>%2F2019%2F08%2F14%2Fubunt-gerrit-daemon%2F</url>
     <content type="text"><![CDATA[$ sudo ln -sfv /srv/gerrit2/bin/gerrit.sh /etc/init.d/gerrit$ sudo update-rc.d -f gerrit remove$ sudo update-rc.d gerrit defaults 92echo “GERRIT_SITE=/srv/gerrti2” &gt; /etc/default/gerritcodereview https://askubuntu.com/questions/721478/ubuntu-init-d-configuration-not-starting-gerrit-2-11-4-at-boothttp://jhshi.me/2016/08/10/start-gerrit-server-upon-boot-on-ubuntu/index.html]]></content>
