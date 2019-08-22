@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Automate EV code signing]]></title>
+    <url>%2F2019%2F08%2F20%2FAutomate-EV-code-signing%2F</url>
+    <content type="text"><![CDATA[Windows API:https://stackoverflow.com/a/26126701 https://www.sorinmustaca.com/sign-files-unattended-in-batch-mode-while-having-an-etoken-no-password-popup/signtool sign /f mycert.cer /csp “eToken Base Cryptographic Provider” /k “[]=KeyContainerNameHere” myfile.exesigntool sign /f EVCode.cer /csp “eToken Base Cryptographic Provider” /k “[]=CONTAINER_NAME “ /t http://timestamp.digicert.com unsign.exe]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[KeyStore Explorer]]></title>
     <url>%2F2019%2F08%2F15%2FKeyStore-Explorer%2F</url>
     <content type="text"><![CDATA[Import self-signed CA into JAVA cacerts fileWindows path: JAVA_PATH\jre\lib\security GUI tool: https://keystore-explorer.org/ https://docs.microsoft.com/zh-tw/azure/java/java-sdk-add-certificate-ca-storekeytool -keystore cacerts -importcert -alias bc2025ca -file bc2025.cerkeytool -list -keystore cacerts]]></content>
