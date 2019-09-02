@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Modify gerrit's username (NoteDB)]]></title>
+    <url>%2F2019%2F09%2F02%2FModify-gerrit-username%2F</url>
+    <content type="text"><![CDATA[https://blog.3skel.com/2019/03/gerrit-converting-from-http-auth-to-ldap/ git clone “ssh://gerrit/All-Users”git fetch origin refs/meta/external-idsgit checkout -b extid FETCH_HEAD grep your_idecho -n “username:your_id” | sha1sum git mv oldgit addgit commit -mgit push origin refs/meta/external-ids]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[Automate EV code signing]]></title>
     <url>%2F2019%2F08%2F20%2FAutomate-EV-code-signing%2F</url>
     <content type="text"><![CDATA[Windows API:https://stackoverflow.com/a/26126701 https://www.sorinmustaca.com/sign-files-unattended-in-batch-mode-while-having-an-etoken-no-password-popup/signtool sign /f mycert.cer /csp “eToken Base Cryptographic Provider” /k “[]=KeyContainerNameHere” myfile.exesigntool sign /f EVCode.cer /csp “eToken Base Cryptographic Provider” /k “[]=CONTAINER_NAME “ /t http://timestamp.digicert.com unsign.exe]]></content>

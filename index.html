@@ -299,6 +299,143 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://baternest.github.io/2019/09/02/Modify-gerrit-username/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Luo ZhengHong">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="https://secure.gravatar.com/avatar/aef895b0f2a30eb255b245a37a76929b">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Baternest's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/09/02/Modify-gerrit-username/" itemprop="url">Modify gerrit's username (NoteDB)</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-02T16:01:32+08:00">2019-09-02</time>
+            
+
+            
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/09/02/Modify-gerrit-username/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/09/02/Modify-gerrit-username/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><a href="https://blog.3skel.com/2019/03/gerrit-converting-from-http-auth-to-ldap/" target="_blank" rel="noopener">https://blog.3skel.com/2019/03/gerrit-converting-from-http-auth-to-ldap/</a></p>
+<p>git clone “ssh://gerrit/All-Users”<br>git fetch origin refs/meta/external-ids<br>git checkout -b extid FETCH_HEAD</p>
+<p>grep your_id<br>echo -n “username:your_id” | sha1sum</p>
+<p>git mv old<br>git add<br>git commit -m<br>git push origin refs/meta/external-ids</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://baternest.github.io/2019/08/20/Automate-EV-code-signing/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1567,149 +1704,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://baternest.github.io/2018/04/20/Windows-GitLab-Runner/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Luo ZhengHong">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="https://secure.gravatar.com/avatar/aef895b0f2a30eb255b245a37a76929b">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Baternest's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/04/20/Windows-GitLab-Runner/" itemprop="url">Windows GitLab Runner</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-20T14:00:34+08:00">2018-04-20</time>
-            
-
-            
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/04/20/Windows-GitLab-Runner/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018/04/20/Windows-GitLab-Runner/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><a href="https://gitlab.com/gitlab-org/gitlab-runner" target="_blank" rel="noopener">GitLab.org / gitlab-runner · GitLab</a></p>
-<p><a href="https://docs.gitlab.com/runner/install/windows.html" target="_blank" rel="noopener">Install GitLab Runner on Windows</a><br><a href="https://docs.gitlab.com/ee/ci/variables/" target="_blank" rel="noopener">GitLab CI/CD Variables</a></p>
-<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">gitlab-runner install <span class="params">--user</span> <span class="string">".\ENTER-YOUR-USERNAME"</span> <span class="params">--password</span> <span class="string">"ENTER-YOUR-PASSWORD"</span></span><br><span class="line">gitlab-runner start</span><br><span class="line"></span><br><span class="line">gitlab-runner register <span class="params">--name</span> zh-runner <span class="params">--url</span> https:<span class="string">//ubuntu</span><span class="function">:8081</span>/gitlab/ <span class="params">--registration-token</span> _8N7_mVwE25etMCvPLGX</span><br><span class="line">gitlab-runner unregister <span class="params">--all-runners</span></span><br><span class="line"></span><br><span class="line">gitlab-runner stop</span><br><span class="line">gitlab-runner uninstall</span><br></pre></td></tr></table></figure>
-<p><a href="https://docs.gitlab.com/runner/commands/README.html#gitlab-runner-register" target="_blank" rel="noopener">gitlab-runner register</a></p>
-<p><a href="https://docs.gitlab.com/runner/faq/#the-service-did-not-start-due-to-a-logon-failure-error-when-starting-service-on-windows" target="_blank" rel="noopener">GitLab Runner FAQ | GitLab </a></p>
-<ul>
-<li><p>Manually using Administrative Tools:</p>
-<p>  Go to Control Panel &gt; System and Security &gt; Administrative Tools,<br>  open the Local Security Policy tool,<br>  chose the Security Settings &gt; Local Policies &gt; User Rights Assignment on the list on the left,<br>  open the Log on as a service on the list on the right,<br>  click on the Add User or Group… button,<br>  add the user (“by hand” or using Advanced… button) and apply the settings.</p>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1759,7 +1753,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">16</span>
+                    <span class="site-state-item-count">17</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
