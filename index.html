@@ -382,7 +382,7 @@
             <p><a href="https://blog.3skel.com/2019/03/gerrit-converting-from-http-auth-to-ldap/" target="_blank" rel="noopener">https://blog.3skel.com/2019/03/gerrit-converting-from-http-auth-to-ldap/</a></p>
 <p>git clone “ssh://gerrit/All-Users”<br>git fetch origin refs/meta/external-ids<br>git checkout -b extid FETCH_HEAD</p>
 <p>grep your_id<br>echo -n “username:your_id” | sha1sum</p>
-<p>git mv old<br>git add<br>git commit -m<br>git push origin refs/meta/external-ids</p>
+<p>git mv old<br>git add<br>git commit -m<br>git push origin HEAD:refs/meta/external-ids</p>
 
           
         
@@ -1078,10 +1078,10 @@
         
           
             <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi ~/.bashrc</span><br></pre></td></tr></table></figure>
+
 <p>uncomment this line</p>
-<pre><code>#force_color_prompt=yes
-</code></pre><p>add [\033[35m]$(__git_ps1)</p>
-<p>PS1=’${debian_chroot:+($debian_chroot)}[\033[01;32m]\u@\h[\033[00m]:[\033[01;34m]\w[\033[35m]$(__git_ps1)[\033[00m]\$ ‘<br>PS1=’${debian_chroot:+($debian_chroot)}[\033[01;32m]\u@\h[\033[00m]:[\033[01;34m]\w                        [\033[00m]\$ ‘</p>
+<pre><code>#force_color_prompt=yes</code></pre><p>add [\033[35m]$(__git_ps1)</p>
+<p>PS1=’${debian_chroot:+($debian_chroot)}[\033[01;32m]\u@\h[\033[00m]:[\033[01;34m]\w[\033[35m]$(__git_ps1)[\033[00m]$ ‘<br>PS1=’${debian_chroot:+($debian_chroot)}[\033[01;32m]\u@\h[\033[00m]:[\033[01;34m]\w                        [\033[00m]$ ‘</p>
 
           
         
@@ -1216,7 +1216,9 @@
         
           
             <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">W: An error occurred during the signature verification. The repository is not updated and the previous index files will be used. GPG error: http://storage.googleapis.com/bazel-apt stable InRelease: The following signatures were invalid: KEYEXPIRED 1527185977  KEYEXPIRED 1527185977  KEYEXPIRED 1527185977</span><br><span class="line">W: Failed to fetch http://storage.googleapis.com/bazel-apt/dists/stable/InRelease  The following signatures were invalid: KEYEXPIRED 1527185977  KEYEXPIRED 1527185977  KEYEXPIRED 1527185977</span><br><span class="line">W: Some index files failed to download. They have been ignored, or old ones used instead.</span><br></pre></td></tr></table></figure>
+
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">apt-key list | grep expired</span><br><span class="line">$ pub   4096R/48457EE0 2016-05-24 [expired: 2018-05-24]</span><br><span class="line">sudo apt-key adv --recv-keys --keyserver keys.gnupg.net 48457EE0</span><br></pre></td></tr></table></figure>
+
 
           
         
@@ -1353,7 +1355,9 @@
             <p><a href="http://chris.wang/posts/2016/01/04/gerrit-dashboards" target="_blank" rel="noopener">Creating Custom Dashboards in Gerrit</a></p>
 <p><a href="https://gerrit-review.googlesource.com/Documentation/user-dashboards.html" target="_blank" rel="noopener">Gerrit Code Review - Dashboards</a></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> ssh://ZH_Luo@ubuntu:29418/All-Projects</span><br><span class="line"><span class="built_in">cd</span> All-Projects</span><br></pre></td></tr></table></figure>
+
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git checkout --orphan custom-dashboards</span><br><span class="line">vim dashboard-file-name</span><br><span class="line">git reset <span class="comment"># if needed to make sure other files aren't going to be committed</span></span><br><span class="line">git add dashboard-file-name <span class="comment"># name of the git config file-formatted dashboard file</span></span><br><span class="line">git commit -m <span class="string">"add dashboard"</span></span><br><span class="line">git push origin custom-dashboards:refs/meta/dashboards/branch_name</span><br></pre></td></tr></table></figure>
+
 <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[dashboard]</span><br><span class="line">  title = Default Dashbord</span><br><span class="line">  description = Most recent <span class="keyword">open</span> <span class="built_in">and</span> merged <span class="keyword">changes</span>.</span><br><span class="line">[section <span class="string">"Open Changes"</span>]</span><br><span class="line">  query = statu<span class="variable">s:open</span> projec<span class="variable">t:</span>$&#123;project&#125; limi<span class="variable">t:15</span></span><br><span class="line">[section <span class="string">"Merged Changes"</span>]</span><br><span class="line">  query = statu<span class="variable">s:merged</span> projec<span class="variable">t:</span>$&#123;project&#125; limi<span class="variable">t:15</span></span><br></pre></td></tr></table></figure>
           
         
@@ -1488,6 +1492,7 @@
         
           
             <h1 id="To-upgrade-all-of-the-packages-LEDE-recommends"><a href="#To-upgrade-all-of-the-packages-LEDE-recommends" class="headerlink" title="To upgrade all of the packages, LEDE recommends,"></a>To upgrade all of the packages, LEDE recommends,</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">opkg list-upgradable | cut -f 1 -d &apos; &apos; | xargs opkg upgrade</span><br></pre></td></tr></table></figure>
+
 <p>opkg install kmod-usb-storage<br>opkg install usbutils<br>lsusb -t</p>
 <p>opkg install block-mount<br>block info | grep “/dev/sd”</p>
 <p>opkg install kmod-fs-ext4<br>block detect &gt; /etc/config/fstab</p>
@@ -1646,8 +1651,8 @@
 <p>救援參考：<a href="https://tomli.blog/archives/2014/07/1878.html" target="_blank" rel="noopener">Buffalo WZR-HP-G450H 刷 OpenWRT – 比尔盖子 博客</a></p>
 <h1 id="設定802-1X認證-有線網路"><a href="#設定802-1X認證-有線網路" class="headerlink" title="設定802.1X認證(有線網路)"></a>設定802.1X認證(有線網路)</h1><p><a href="http://www.cnblogs.com/kkzxak47/archive/2013/03/16/2961964.html" target="_blank" rel="noopener">http://www.cnblogs.com/kkzxak47/archive/2013/03/16/2961964.html</a></p>
 <h1 id="wget-https-link"><a href="#wget-https-link" class="headerlink" title="wget https link"></a>wget https link</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># opkg update</span></span><br><span class="line"><span class="comment"># opkg install wget</span></span><br></pre></td></tr></table></figure>
-<p>wpa_supplicant -B -i eth0.3 -c /etc/wpa_supplicant/wpa_supplicant.conf -D wired</p>
-<h1 id="lt-lt-lt-lt-lt-lt-lt-Updated-upstream"><a href="#lt-lt-lt-lt-lt-lt-lt-Updated-upstream" class="headerlink" title="&lt;&lt;&lt;&lt;&lt;&lt;&lt; Updated upstream"></a>&lt;&lt;&lt;&lt;&lt;&lt;&lt; Updated upstream</h1><p>wpa_supplicant -B -D wired -i eth0.3 -c /etc/config/wpa.conf </p>
+
+<p>wpa_supplicant -B -i eth0.3 -c /etc/wpa_supplicant/wpa_supplicant.conf -D wired<br>&lt;&lt;&lt;&lt;&lt;&lt;&lt; Updated upstream<br>=======<br>wpa_supplicant -B -D wired -i eth0.3 -c /etc/config/wpa.conf </p>
 <blockquote>
 <blockquote>
 <blockquote>

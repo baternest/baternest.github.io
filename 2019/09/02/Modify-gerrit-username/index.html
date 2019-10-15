@@ -110,7 +110,7 @@
 <meta property="og:site_name" content="Baternest&#39;s blog">
 <meta property="og:description" content="https://blog.3skel.com/2019/03/gerrit-converting-from-http-auth-to-ldap/ git clone “ssh://gerrit/All-Users”git fetch origin refs/meta/external-idsgit checkout -b extid FETCH_HEAD grep your_idecho -n “">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-09-02T08:23:25.588Z">
+<meta property="og:updated_time" content="2019-10-15T02:28:32.223Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Modify gerrit&#39;s username (NoteDB)">
 <meta name="twitter:description" content="https://blog.3skel.com/2019/03/gerrit-converting-from-http-auth-to-ldap/ git clone “ssh://gerrit/All-Users”git fetch origin refs/meta/external-idsgit checkout -b extid FETCH_HEAD grep your_idecho -n “">
@@ -378,7 +378,7 @@
         <p><a href="https://blog.3skel.com/2019/03/gerrit-converting-from-http-auth-to-ldap/" target="_blank" rel="noopener">https://blog.3skel.com/2019/03/gerrit-converting-from-http-auth-to-ldap/</a></p>
 <p>git clone “ssh://gerrit/All-Users”<br>git fetch origin refs/meta/external-ids<br>git checkout -b extid FETCH_HEAD</p>
 <p>grep your_id<br>echo -n “username:your_id” | sha1sum</p>
-<p>git mv old<br>git add<br>git commit -m<br>git push origin refs/meta/external-ids</p>
+<p>git mv old<br>git add<br>git commit -m<br>git push origin HEAD:refs/meta/external-ids</p>
 
       
     </div>

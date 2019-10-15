@@ -110,7 +110,7 @@
 <meta property="og:site_name" content="Baternest&#39;s blog">
 <meta property="og:description" content="1234sudo apt-get updateW: An error occurred during the signature verification. The repository is not updated and the previous index files will be used. GPG error: http://storage.googleapis.com/bazel-a">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-09-02T08:23:25.588Z">
+<meta property="og:updated_time" content="2019-10-15T02:28:32.223Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="fix Ubuntu KEYEXPIRED error message">
 <meta name="twitter:description" content="1234sudo apt-get updateW: An error occurred during the signature verification. The repository is not updated and the previous index files will be used. GPG error: http://storage.googleapis.com/bazel-a">
@@ -376,7 +376,9 @@
 
       
         <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">W: An error occurred during the signature verification. The repository is not updated and the previous index files will be used. GPG error: http://storage.googleapis.com/bazel-apt stable InRelease: The following signatures were invalid: KEYEXPIRED 1527185977  KEYEXPIRED 1527185977  KEYEXPIRED 1527185977</span><br><span class="line">W: Failed to fetch http://storage.googleapis.com/bazel-apt/dists/stable/InRelease  The following signatures were invalid: KEYEXPIRED 1527185977  KEYEXPIRED 1527185977  KEYEXPIRED 1527185977</span><br><span class="line">W: Some index files failed to download. They have been ignored, or old ones used instead.</span><br></pre></td></tr></table></figure>
+
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">apt-key list | grep expired</span><br><span class="line">$ pub   4096R/48457EE0 2016-05-24 [expired: 2018-05-24]</span><br><span class="line">sudo apt-key adv --recv-keys --keyserver keys.gnupg.net 48457EE0</span><br></pre></td></tr></table></figure>
+
 
       
     </div>

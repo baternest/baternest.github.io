@@ -103,17 +103,17 @@
   <meta name="keywords" content="Hexo, NexT">
 
 
-<meta name="description" content="Creating Custom Dashboards in Gerrit Gerrit Code Review - Dashboards 12git clone ssh://ZH_Luo@ubuntu:29418/All-Projectscd All-Projects 123456git checkout --orphan custom-dashboardsvim dashboard-file-n">
+<meta name="description" content="Creating Custom Dashboards in Gerrit Gerrit Code Review - Dashboards 12git clone ssh://ZH_Luo@ubuntu:29418/All-Projectscd All-Projects  123456git checkout --orphan custom-dashboardsvim dashboard-file-">
 <meta property="og:type" content="article">
 <meta property="og:title" content="gerrit project dashboard">
 <meta property="og:url" content="https://baternest.github.io/2018/08/31/gerrit-project-dashboard/index.html">
 <meta property="og:site_name" content="Baternest&#39;s blog">
-<meta property="og:description" content="Creating Custom Dashboards in Gerrit Gerrit Code Review - Dashboards 12git clone ssh://ZH_Luo@ubuntu:29418/All-Projectscd All-Projects 123456git checkout --orphan custom-dashboardsvim dashboard-file-n">
+<meta property="og:description" content="Creating Custom Dashboards in Gerrit Gerrit Code Review - Dashboards 12git clone ssh://ZH_Luo@ubuntu:29418/All-Projectscd All-Projects  123456git checkout --orphan custom-dashboardsvim dashboard-file-">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-09-02T08:23:25.588Z">
+<meta property="og:updated_time" content="2019-10-15T02:28:32.223Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="gerrit project dashboard">
-<meta name="twitter:description" content="Creating Custom Dashboards in Gerrit Gerrit Code Review - Dashboards 12git clone ssh://ZH_Luo@ubuntu:29418/All-Projectscd All-Projects 123456git checkout --orphan custom-dashboardsvim dashboard-file-n">
+<meta name="twitter:description" content="Creating Custom Dashboards in Gerrit Gerrit Code Review - Dashboards 12git clone ssh://ZH_Luo@ubuntu:29418/All-Projectscd All-Projects  123456git checkout --orphan custom-dashboardsvim dashboard-file-">
 
 
 
@@ -378,7 +378,9 @@
         <p><a href="http://chris.wang/posts/2016/01/04/gerrit-dashboards" target="_blank" rel="noopener">Creating Custom Dashboards in Gerrit</a></p>
 <p><a href="https://gerrit-review.googlesource.com/Documentation/user-dashboards.html" target="_blank" rel="noopener">Gerrit Code Review - Dashboards</a></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> ssh://ZH_Luo@ubuntu:29418/All-Projects</span><br><span class="line"><span class="built_in">cd</span> All-Projects</span><br></pre></td></tr></table></figure>
+
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git checkout --orphan custom-dashboards</span><br><span class="line">vim dashboard-file-name</span><br><span class="line">git reset <span class="comment"># if needed to make sure other files aren't going to be committed</span></span><br><span class="line">git add dashboard-file-name <span class="comment"># name of the git config file-formatted dashboard file</span></span><br><span class="line">git commit -m <span class="string">"add dashboard"</span></span><br><span class="line">git push origin custom-dashboards:refs/meta/dashboards/branch_name</span><br></pre></td></tr></table></figure>
+
 <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[dashboard]</span><br><span class="line">  title = Default Dashbord</span><br><span class="line">  description = Most recent <span class="keyword">open</span> <span class="built_in">and</span> merged <span class="keyword">changes</span>.</span><br><span class="line">[section <span class="string">"Open Changes"</span>]</span><br><span class="line">  query = statu<span class="variable">s:open</span> projec<span class="variable">t:</span>$&#123;project&#125; limi<span class="variable">t:15</span></span><br><span class="line">[section <span class="string">"Merged Changes"</span>]</span><br><span class="line">  query = statu<span class="variable">s:merged</span> projec<span class="variable">t:</span>$&#123;project&#125; limi<span class="variable">t:15</span></span><br></pre></td></tr></table></figure>
       
     </div>

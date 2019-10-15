@@ -1,19 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[Modify gerrit's username (NoteDB)]]></title>
-    <url>%2F2019%2F09%2F02%2FModify-gerrit-username%2F</url>
-    <content type="text"><![CDATA[https://blog.3skel.com/2019/03/gerrit-converting-from-http-auth-to-ldap/ git clone “ssh://gerrit/All-Users”git fetch origin refs/meta/external-idsgit checkout -b extid FETCH_HEAD grep your_idecho -n “username:your_id” | sha1sum git mv oldgit addgit commit -mgit push origin refs/meta/external-ids]]></content>
+    <title>Modify gerrit's username (NoteDB)</title>
+    <url>/2019/09/02/Modify-gerrit-username/</url>
+    <content><![CDATA[<p><a href="https://blog.3skel.com/2019/03/gerrit-converting-from-http-auth-to-ldap/" target="_blank" rel="noopener">https://blog.3skel.com/2019/03/gerrit-converting-from-http-auth-to-ldap/</a></p>
+<p>git clone “ssh://gerrit/All-Users”<br>git fetch origin refs/meta/external-ids<br>git checkout -b extid FETCH_HEAD</p>
+<p>grep your_id<br>echo -n “username:your_id” | sha1sum</p>
+<p>git mv old<br>git add<br>git commit -m<br>git push origin HEAD:refs/meta/external-ids</p>
+]]></content>
   </entry>
   <entry>
-    <title><![CDATA[Automate EV code signing]]></title>
-    <url>%2F2019%2F08%2F20%2FAutomate-EV-code-signing%2F</url>
-    <content type="text"><![CDATA[Windows API:https://stackoverflow.com/a/26126701 https://www.sorinmustaca.com/sign-files-unattended-in-batch-mode-while-having-an-etoken-no-password-popup/signtool sign /f mycert.cer /csp “eToken Base Cryptographic Provider” /k “[]=KeyContainerNameHere” myfile.exesigntool sign /f EVCode.cer /csp “eToken Base Cryptographic Provider” /k “[]=CONTAINER_NAME “ /t http://timestamp.digicert.com unsign.exe]]></content>
+    <title>Automate EV code signing</title>
+    <url>/2019/08/20/Automate-EV-code-signing/</url>
+    <content><![CDATA[<p>Windows API:<br><a href="https://stackoverflow.com/a/26126701" target="_blank" rel="noopener">https://stackoverflow.com/a/26126701</a></p>
+<p><a href="https://www.sorinmustaca.com/sign-files-unattended-in-batch-mode-while-having-an-etoken-no-password-popup/" target="_blank" rel="noopener">https://www.sorinmustaca.com/sign-files-unattended-in-batch-mode-while-having-an-etoken-no-password-popup/</a><br>signtool sign /f mycert.cer /csp “eToken Base Cryptographic Provider” /k “[]=KeyContainerNameHere” myfile.exe<br>signtool sign /f EVCode.cer /csp “eToken Base Cryptographic Provider” /k “[]=CONTAINER_NAME “ /t <a href="http://timestamp.digicert.com" target="_blank" rel="noopener">http://timestamp.digicert.com</a> unsign.exe</p>
+]]></content>
   </entry>
   <entry>
-    <title><![CDATA[KeyStore Explorer]]></title>
-    <url>%2F2019%2F08%2F15%2FKeyStore-Explorer%2F</url>
-    <content type="text"><![CDATA[Import self-signed CA into JAVA cacerts fileWindows path: JAVA_PATH\jre\lib\security GUI tool: https://keystore-explorer.org/ https://docs.microsoft.com/zh-tw/azure/java/java-sdk-add-certificate-ca-storekeytool -keystore cacerts -importcert -alias bc2025ca -file bc2025.cerkeytool -list -keystore cacerts]]></content>
+    <title>KeyStore Explorer</title>
+    <url>/2019/08/15/KeyStore-Explorer/</url>
+    <content><![CDATA[<h1 id="Import-self-signed-CA-into-JAVA-cacerts-file"><a href="#Import-self-signed-CA-into-JAVA-cacerts-file" class="headerlink" title="Import self-signed CA  into JAVA cacerts file"></a>Import self-signed CA  into JAVA cacerts file</h1><p>Windows path: JAVA_PATH\jre\lib\security</p>
+<p>GUI tool: <a href="https://keystore-explorer.org/" target="_blank" rel="noopener">https://keystore-explorer.org/</a></p>
+<p><a href="https://docs.microsoft.com/zh-tw/azure/java/java-sdk-add-certificate-ca-store" target="_blank" rel="noopener">https://docs.microsoft.com/zh-tw/azure/java/java-sdk-add-certificate-ca-store</a><br>keytool -keystore cacerts -importcert -alias bc2025ca -file bc2025.cer<br>keytool -list -keystore cacerts</p>
+]]></content>
       <categories>
         <category>java</category>
       </categories>
@@ -22,39 +31,89 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[ubunt-gerrit-daemon]]></title>
-    <url>%2F2019%2F08%2F14%2Fubunt-gerrit-daemon%2F</url>
-    <content type="text"><![CDATA[$ sudo ln -sfv /srv/gerrit2/bin/gerrit.sh /etc/init.d/gerrit$ sudo update-rc.d -f gerrit remove$ sudo update-rc.d gerrit defaults 92echo “GERRIT_SITE=/srv/gerrti2” &gt; /etc/default/gerritcodereview https://askubuntu.com/questions/721478/ubuntu-init-d-configuration-not-starting-gerrit-2-11-4-at-boothttp://jhshi.me/2016/08/10/start-gerrit-server-upon-boot-on-ubuntu/index.html]]></content>
+    <title>ubunt-gerrit-daemon</title>
+    <url>/2019/08/14/ubunt-gerrit-daemon/</url>
+    <content><![CDATA[<p>$ sudo ln -sfv /srv/gerrit2/bin/gerrit.sh /etc/init.d/gerrit<br>$ sudo update-rc.d -f gerrit remove<br>$ sudo update-rc.d gerrit defaults 92<br>echo “GERRIT_SITE=/srv/gerrti2” &gt; /etc/default/gerritcodereview</p>
+<p><a href="https://askubuntu.com/questions/721478/ubuntu-init-d-configuration-not-starting-gerrit-2-11-4-at-boot" target="_blank" rel="noopener">https://askubuntu.com/questions/721478/ubuntu-init-d-configuration-not-starting-gerrit-2-11-4-at-boot</a><br><a href="http://jhshi.me/2016/08/10/start-gerrit-server-upon-boot-on-ubuntu/index.html" target="_blank" rel="noopener">http://jhshi.me/2016/08/10/start-gerrit-server-upon-boot-on-ubuntu/index.html</a></p>
+]]></content>
   </entry>
   <entry>
-    <title><![CDATA[upgrade hexo]]></title>
-    <url>%2F2018%2F09%2F06%2Fupgrade-hexo%2F</url>
-    <content type="text"><![CDATA[$ npm outdatedPackage Current Wanted Latest Locationhexo 3.5.0 3.7.1 3.7.1 hexo-sitehexo-server 0.2.2 0.2.2 0.3.3 hexo-site modify package.json version string npm install –save hexo version]]></content>
+    <title>upgrade hexo</title>
+    <url>/2018/09/06/upgrade-hexo/</url>
+    <content><![CDATA[<p>$ npm outdated<br>Package      Current  Wanted  Latest  Location<br>hexo           3.5.0   3.7.1   3.7.1  hexo-site<br>hexo-server    0.2.2   0.2.2   0.3.3  hexo-site</p>
+<p>modify package.json version string</p>
+<p>npm install –save</p>
+<p>hexo version</p>
+]]></content>
   </entry>
   <entry>
-    <title><![CDATA[ubuntu color prompt with __git_ps1]]></title>
-    <url>%2F2018%2F09%2F06%2Fubuntu-color-prompt-with-git-ps1%2F</url>
-    <content type="text"><![CDATA[1vi ~/.bashrc uncomment this line #force_color_prompt=yes add [\033[35m]$(__git_ps1) PS1=’${debian_chroot:+($debian_chroot)}[\033[01;32m]\u@\h[\033[00m]:[\033[01;34m]\w[\033[35m]$(__git_ps1)[\033[00m]\$ ‘PS1=’${debian_chroot:+($debian_chroot)}[\033[01;32m]\u@\h[\033[00m]:[\033[01;34m]\w [\033[00m]\$ ‘]]></content>
+    <title>ubuntu color prompt with __git_ps1</title>
+    <url>/2018/09/06/ubuntu-color-prompt-with-git-ps1/</url>
+    <content><![CDATA[<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vi ~/.bashrc</span><br></pre></td></tr></table></figure>
+
+<p>uncomment this line</p>
+<pre><code>#force_color_prompt=yes</code></pre><p>add [\033[35m]$(__git_ps1)</p>
+<p>PS1=’${debian_chroot:+($debian_chroot)}[\033[01;32m]\u@\h[\033[00m]:[\033[01;34m]\w[\033[35m]$(__git_ps1)[\033[00m]$ ‘<br>PS1=’${debian_chroot:+($debian_chroot)}[\033[01;32m]\u@\h[\033[00m]:[\033[01;34m]\w                        [\033[00m]$ ‘</p>
+]]></content>
   </entry>
   <entry>
-    <title><![CDATA[fix Ubuntu KEYEXPIRED error message]]></title>
-    <url>%2F2018%2F09%2F03%2Ffix-Ubuntu-KEYEXPIRED-error-message%2F</url>
-    <content type="text"><![CDATA[1234sudo apt-get updateW: An error occurred during the signature verification. The repository is not updated and the previous index files will be used. GPG error: http://storage.googleapis.com/bazel-apt stable InRelease: The following signatures were invalid: KEYEXPIRED 1527185977 KEYEXPIRED 1527185977 KEYEXPIRED 1527185977W: Failed to fetch http://storage.googleapis.com/bazel-apt/dists/stable/InRelease The following signatures were invalid: KEYEXPIRED 1527185977 KEYEXPIRED 1527185977 KEYEXPIRED 1527185977W: Some index files failed to download. They have been ignored, or old ones used instead. 1234apt-key list | grep expired$ pub 4096R/48457EE0 2016-05-24 [expired: 2018-05-24]sudo apt-key adv --recv-keys --keyserver keys.gnupg.net 48457EE0]]></content>
+    <title>fix Ubuntu KEYEXPIRED error message</title>
+    <url>/2018/09/03/fix-Ubuntu-KEYEXPIRED-error-message/</url>
+    <content><![CDATA[<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">W: An error occurred during the signature verification. The repository is not updated and the previous index files will be used. GPG error: http://storage.googleapis.com/bazel-apt stable InRelease: The following signatures were invalid: KEYEXPIRED 1527185977  KEYEXPIRED 1527185977  KEYEXPIRED 1527185977</span><br><span class="line">W: Failed to fetch http://storage.googleapis.com/bazel-apt/dists/stable/InRelease  The following signatures were invalid: KEYEXPIRED 1527185977  KEYEXPIRED 1527185977  KEYEXPIRED 1527185977</span><br><span class="line">W: Some index files failed to download. They have been ignored, or old ones used instead.</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">apt-key list | grep expired</span><br><span class="line">$ pub   4096R/48457EE0 2016-05-24 [expired: 2018-05-24]</span><br><span class="line">sudo apt-key adv --recv-keys --keyserver keys.gnupg.net 48457EE0</span><br></pre></td></tr></table></figure>
+
+]]></content>
   </entry>
   <entry>
-    <title><![CDATA[gerrit project dashboard]]></title>
-    <url>%2F2018%2F08%2F31%2Fgerrit-project-dashboard%2F</url>
-    <content type="text"><![CDATA[Creating Custom Dashboards in Gerrit Gerrit Code Review - Dashboards 12git clone ssh://ZH_Luo@ubuntu:29418/All-Projectscd All-Projects 123456git checkout --orphan custom-dashboardsvim dashboard-file-namegit reset # if needed to make sure other files aren't going to be committedgit add dashboard-file-name # name of the git config file-formatted dashboard filegit commit -m "add dashboard"git push origin custom-dashboards:refs/meta/dashboards/branch_name 1234567[dashboard] title = Default Dashbord description = Most recent open and merged changes.[section "Open Changes"] query = status:open project:$&#123;project&#125; limit:15[section "Merged Changes"] query = status:merged project:$&#123;project&#125; limit:15]]></content>
+    <title>gerrit project dashboard</title>
+    <url>/2018/08/31/gerrit-project-dashboard/</url>
+    <content><![CDATA[<p><a href="http://chris.wang/posts/2016/01/04/gerrit-dashboards" target="_blank" rel="noopener">Creating Custom Dashboards in Gerrit</a></p>
+<p><a href="https://gerrit-review.googlesource.com/Documentation/user-dashboards.html" target="_blank" rel="noopener">Gerrit Code Review - Dashboards</a></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> ssh://ZH_Luo@ubuntu:29418/All-Projects</span><br><span class="line"><span class="built_in">cd</span> All-Projects</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git checkout --orphan custom-dashboards</span><br><span class="line">vim dashboard-file-name</span><br><span class="line">git reset <span class="comment"># if needed to make sure other files aren't going to be committed</span></span><br><span class="line">git add dashboard-file-name <span class="comment"># name of the git config file-formatted dashboard file</span></span><br><span class="line">git commit -m <span class="string">"add dashboard"</span></span><br><span class="line">git push origin custom-dashboards:refs/meta/dashboards/branch_name</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight vim"><table><tr><td class="code"><pre><span class="line">[dashboard]</span><br><span class="line">  title = Default Dashbord</span><br><span class="line">  description = Most recent <span class="keyword">open</span> <span class="built_in">and</span> merged <span class="keyword">changes</span>.</span><br><span class="line">[section <span class="string">"Open Changes"</span>]</span><br><span class="line">  query = statu<span class="variable">s:open</span> projec<span class="variable">t:</span>$&#123;project&#125; limi<span class="variable">t:15</span></span><br><span class="line">[section <span class="string">"Merged Changes"</span>]</span><br><span class="line">  query = statu<span class="variable">s:merged</span> projec<span class="variable">t:</span>$&#123;project&#125; limi<span class="variable">t:15</span></span><br></pre></td></tr></table></figure>]]></content>
   </entry>
   <entry>
-    <title><![CDATA[OpenWrt LEDE]]></title>
-    <url>%2F2018%2F06%2F01%2FOpenWrt-LEDE%2F</url>
-    <content type="text"><![CDATA[To upgrade all of the packages, LEDE recommends,1opkg list-upgradable | cut -f 1 -d &apos; &apos; | xargs opkg upgrade opkg install kmod-usb-storageopkg install usbutilslsusb -t opkg install block-mountblock info | grep “/dev/sd” opkg install kmod-fs-ext4block detect &gt; /etc/config/fstab Install Samba12opkg updateopkg install samba36-server luci-app-samba]]></content>
+    <title>OpenWrt LEDE</title>
+    <url>/2018/06/01/OpenWrt-LEDE/</url>
+    <content><![CDATA[<h1 id="To-upgrade-all-of-the-packages-LEDE-recommends"><a href="#To-upgrade-all-of-the-packages-LEDE-recommends" class="headerlink" title="To upgrade all of the packages, LEDE recommends,"></a>To upgrade all of the packages, LEDE recommends,</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">opkg list-upgradable | cut -f 1 -d &apos; &apos; | xargs opkg upgrade</span><br></pre></td></tr></table></figure>
+
+<p>opkg install kmod-usb-storage<br>opkg install usbutils<br>lsusb -t</p>
+<p>opkg install block-mount<br>block info | grep “/dev/sd”</p>
+<p>opkg install kmod-fs-ext4<br>block detect &gt; /etc/config/fstab</p>
+<h1 id="Install-Samba"><a href="#Install-Samba" class="headerlink" title="Install Samba"></a>Install Samba</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">opkg update</span><br><span class="line">opkg install samba36-server luci-app-samba</span><br></pre></td></tr></table></figure>]]></content>
   </entry>
   <entry>
-    <title><![CDATA[Buffalo WZR-HP-G450H + OpenWrt]]></title>
-    <url>%2F2018%2F05%2F30%2FBuffalo-WZR-HP-G450H-OpenWrt%2F</url>
-    <content type="text"><![CDATA[前言發現有新版的OpenWrt (LEDE 17.01)，更新時未仔細確認一時手殘刷掛機器… 救援參考：Buffalo WZR-HP-G450H 刷 OpenWRT – 比尔盖子 博客 設定802.1X認證(有線網路)http://www.cnblogs.com/kkzxak47/archive/2013/03/16/2961964.html wget https link12# opkg update# opkg install wget wpa_supplicant -B -i eth0.3 -c /etc/wpa_supplicant/wpa_supplicant.conf -D wired &lt;&lt;&lt;&lt;&lt;&lt;&lt; Updated upstreamwpa_supplicant -B -D wired -i eth0.3 -c /etc/config/wpa.conf Stashed changes udhcpc -i eth0.3 remove wpa-miniinstall wpad luci-app-sambasamba36-server]]></content>
+    <title>Buffalo WZR-HP-G450H + OpenWrt</title>
+    <url>/2018/05/30/Buffalo-WZR-HP-G450H-OpenWrt/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>發現有新版的OpenWrt (LEDE 17.01)，更新時未仔細確認<br>一時手殘刷掛機器…</p>
+<p>救援參考：<a href="https://tomli.blog/archives/2014/07/1878.html" target="_blank" rel="noopener">Buffalo WZR-HP-G450H 刷 OpenWRT – 比尔盖子 博客</a></p>
+<h1 id="設定802-1X認證-有線網路"><a href="#設定802-1X認證-有線網路" class="headerlink" title="設定802.1X認證(有線網路)"></a>設定802.1X認證(有線網路)</h1><p><a href="http://www.cnblogs.com/kkzxak47/archive/2013/03/16/2961964.html" target="_blank" rel="noopener">http://www.cnblogs.com/kkzxak47/archive/2013/03/16/2961964.html</a></p>
+<h1 id="wget-https-link"><a href="#wget-https-link" class="headerlink" title="wget https link"></a>wget https link</h1><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># opkg update</span></span><br><span class="line"><span class="comment"># opkg install wget</span></span><br></pre></td></tr></table></figure>
+
+<p>wpa_supplicant -B -i eth0.3 -c /etc/wpa_supplicant/wpa_supplicant.conf -D wired<br>&lt;&lt;&lt;&lt;&lt;&lt;&lt; Updated upstream<br>=======<br>wpa_supplicant -B -D wired -i eth0.3 -c /etc/config/wpa.conf </p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>Stashed changes</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>udhcpc -i eth0.3</p>
+<p>remove wpa-mini<br>install wpad</p>
+<p>luci-app-samba<br>samba36-server</p>
+]]></content>
       <categories>
         <category>router</category>
       </categories>
@@ -63,19 +122,47 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Windows GitLab Runner]]></title>
-    <url>%2F2018%2F04%2F20%2FWindows-GitLab-Runner%2F</url>
-    <content type="text"><![CDATA[GitLab.org / gitlab-runner · GitLab Install GitLab Runner on WindowsGitLab CI/CD Variables 12345678gitlab-runner install --user ".\ENTER-YOUR-USERNAME" --password "ENTER-YOUR-PASSWORD"gitlab-runner startgitlab-runner register --name zh-runner --url https://ubuntu:8081/gitlab/ --registration-token _8N7_mVwE25etMCvPLGXgitlab-runner unregister --all-runnersgitlab-runner stopgitlab-runner uninstall gitlab-runner register GitLab Runner FAQ | GitLab Manually using Administrative Tools: Go to Control Panel &gt; System and Security &gt; Administrative Tools, open the Local Security Policy tool, chose the Security Settings &gt; Local Policies &gt; User Rights Assignment on the list on the left, open the Log on as a service on the list on the right, click on the Add User or Group… button, add the user (“by hand” or using Advanced… button) and apply the settings.]]></content>
+    <title>Windows GitLab Runner</title>
+    <url>/2018/04/20/Windows-GitLab-Runner/</url>
+    <content><![CDATA[<p><a href="https://gitlab.com/gitlab-org/gitlab-runner" target="_blank" rel="noopener">GitLab.org / gitlab-runner · GitLab</a></p>
+<p><a href="https://docs.gitlab.com/runner/install/windows.html" target="_blank" rel="noopener">Install GitLab Runner on Windows</a><br><a href="https://docs.gitlab.com/ee/ci/variables/" target="_blank" rel="noopener">GitLab CI/CD Variables</a></p>
+<figure class="highlight jboss-cli"><table><tr><td class="code"><pre><span class="line">gitlab-runner install <span class="params">--user</span> <span class="string">".\ENTER-YOUR-USERNAME"</span> <span class="params">--password</span> <span class="string">"ENTER-YOUR-PASSWORD"</span></span><br><span class="line">gitlab-runner start</span><br><span class="line"></span><br><span class="line">gitlab-runner register <span class="params">--name</span> zh-runner <span class="params">--url</span> https:<span class="string">//ubuntu</span><span class="function">:8081</span>/gitlab/ <span class="params">--registration-token</span> _8N7_mVwE25etMCvPLGX</span><br><span class="line">gitlab-runner unregister <span class="params">--all-runners</span></span><br><span class="line"></span><br><span class="line">gitlab-runner stop</span><br><span class="line">gitlab-runner uninstall</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://docs.gitlab.com/runner/commands/README.html#gitlab-runner-register" target="_blank" rel="noopener">gitlab-runner register</a></p>
+<p><a href="https://docs.gitlab.com/runner/faq/#the-service-did-not-start-due-to-a-logon-failure-error-when-starting-service-on-windows" target="_blank" rel="noopener">GitLab Runner FAQ | GitLab </a></p>
+<ul>
+<li><p>Manually using Administrative Tools:</p>
+<p>  Go to Control Panel &gt; System and Security &gt; Administrative Tools,<br>  open the Local Security Policy tool,<br>  chose the Security Settings &gt; Local Policies &gt; User Rights Assignment on the list on the left,<br>  open the Log on as a service on the list on the right,<br>  click on the Add User or Group… button,<br>  add the user (“by hand” or using Advanced… button) and apply the settings.</p>
+</li>
+</ul>
+]]></content>
   </entry>
   <entry>
-    <title><![CDATA[ATL Simple Object Options]]></title>
-    <url>%2F2018%2F04%2F12%2FATL-Simple-Object-Options%2F</url>
-    <content type="text"><![CDATA[OptionsAggregationYes: (NONE)No: DECLARE_NOT_AGGREGATABLE()Only: DECLARE_ONLY_AGGREGATABLE() Interface (IDL Attributes)Dual: dualCustom: (NONE)Custom with Automation compatible: (oleautomation) IDL Attributes Threading modelCComSingleThreadModelSingle: (NONE)Apartment: val ThreadingModel = s ‘Apartment’ CComMultiThreadModelBoth: val ThreadingModel = s ‘Both’ Free-threaded marshaler: CoCreateFreeThreadedMarshaler()Free: val ThreadingModel = s ‘Free’Neutral: val ThreadingModel = s ‘Neutral’]]></content>
+    <title>ATL Simple Object Options</title>
+    <url>/2018/04/12/ATL-Simple-Object-Options/</url>
+    <content><![CDATA[<h1 id="Options"><a href="#Options" class="headerlink" title="Options"></a>Options</h1><h2 id="Aggregation"><a href="#Aggregation" class="headerlink" title="Aggregation"></a>Aggregation</h2><p>Yes: (NONE)<br>No: DECLARE_NOT_AGGREGATABLE()<br>Only: DECLARE_ONLY_AGGREGATABLE()</p>
+<h2 id="Interface-IDL-Attributes"><a href="#Interface-IDL-Attributes" class="headerlink" title="Interface (IDL Attributes)"></a>Interface (IDL Attributes)</h2><p>Dual: dual<br>Custom: (NONE)<br>Custom with Automation compatible: (oleautomation)</p>
+<p><a href="https://msdn.microsoft.com/en-us/library/8tesw2eh.aspx" target="_blank" rel="noopener">IDL Attributes</a></p>
+<h2 id="Threading-model"><a href="#Threading-model" class="headerlink" title="Threading model"></a>Threading model</h2><p>CComSingleThreadModel<br>Single: (NONE)<br>Apartment: val ThreadingModel = s ‘Apartment’</p>
+<p>CComMultiThreadModel<br>Both: val ThreadingModel = s ‘Both’<br>    Free-threaded marshaler: CoCreateFreeThreadedMarshaler()<br>Free: val ThreadingModel = s ‘Free’<br>Neutral: val ThreadingModel = s ‘Neutral’</p>
+]]></content>
   </entry>
   <entry>
-    <title><![CDATA[Ubuntu Server 16.04 in VM for Gerrit server]]></title>
-    <url>%2F2018%2F03%2F29%2FUbuntu-Server-16-04-in-VM-for-Gerrit-server%2F</url>
-    <content type="text"><![CDATA[Install Ubuntu Server 16.04 in VMware Workstation 14 PlayerInstall Packages123sudo apt-get updatesudo apt-get install openssh-serversudo apt-get install open-vm-tools 12sudo mkdir /mnt/hgfssudo vmhgfs-fuse .host:/$(vmware-hgfsclient) /mnt/hgfs/ -o allow_other Mount12vmhgfs-fuse .host:/$(vmware-hgfsclient) ~/some_mountpointsudo mount -t fuse.vmhgfs-fuse .host:/ /mnt/hgfs -o allow_other Mount1.host:/ /mnt/hgfs fuse.vmhgfs-fuse allow_other 0 0 12sudo apt-get install default-jresudo apt-get install apache2 postgresql 123sudo su postgrescreateuser --username=postgres -RDIElPS gerrit2createdb --username=postgres -E UTF-8 -O gerrit2 reviewdb 1java -jar gerrit.war init -d /path/to/your/gerrit_application_directory]]></content>
+    <title>Ubuntu Server 16.04 in VM for Gerrit server</title>
+    <url>/2018/03/29/Ubuntu-Server-16-04-in-VM-for-Gerrit-server/</url>
+    <content><![CDATA[<h1 id="Install-Ubuntu-Server-16-04-in-VMware-Workstation-14-Player"><a href="#Install-Ubuntu-Server-16-04-in-VMware-Workstation-14-Player" class="headerlink" title="Install Ubuntu Server 16.04 in VMware Workstation 14 Player"></a>Install Ubuntu Server 16.04 in VMware Workstation 14 Player</h1><h2 id="Install-Packages"><a href="#Install-Packages" class="headerlink" title="Install Packages"></a>Install Packages</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install openssh-server</span><br><span class="line">sudo apt-get install open-vm-tools</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo mkdir /mnt/hgfs</span><br><span class="line">sudo vmhgfs-fuse .host:/$(vmware-hgfsclient) /mnt/hgfs/ -o allow_other</span><br></pre></td></tr></table></figure>
+
+<h3 id="Mount"><a href="#Mount" class="headerlink" title="Mount"></a>Mount</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vmhgfs-fuse .host:/$(vmware-hgfsclient) ~/some_mountpoint</span><br><span class="line">sudo mount -t fuse.vmhgfs-fuse .host:/ /mnt/hgfs -o allow_other</span><br></pre></td></tr></table></figure>
+
+<h3 id="Mount-1"><a href="#Mount-1" class="headerlink" title="Mount"></a>Mount</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">.host:/ /mnt/hgfs fuse.vmhgfs-fuse allow_other 0 0</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get install default-jre</span><br><span class="line">sudo apt-get install apache2 postgresql</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo su postgres</span><br><span class="line">createuser --username=postgres -RDIElPS gerrit2</span><br><span class="line">createdb --username=postgres -E UTF-8 -O gerrit2 reviewdb</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">java -jar gerrit.war init -d /path/to/your/gerrit_application_directory</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>Ubuntu</category>
       </categories>
@@ -84,17 +171,27 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Monitor Gerrit server error_log size]]></title>
-    <url>%2F2018%2F03%2F26%2FMonitor-Gerrit-server-error-log-size%2F</url>
-    <content type="text"><![CDATA[Script1234567891011# Checkout error_log sizefile="/home/gerrit2/gerrit-2.14.7/logs/error_log"maxsize=1000 # 1000 kilobytesactualsize=$(du -k "$file" | cut -f1)if [ $actualsize -ge $maxsize ]; then echo size is over $maxsize kilobytes echo "Gerrit error_log size is over $maxsize kilobytes" | mutt -s "Gerrit error_log size warning!" -c baternest@gmail.com exitelse echo size is under $maxsize kilobytesfi Install package12sudo apt-get install msmtpsudo apt-get install mutt Configuration1vi /etc/msmtprc 1234567vi ~/.muttrcset sendmail="/usr/bin/msmtp"set use_from=yesset realname="gerrit2@server.vm"set from=gerrit2@server.vmset envelope_from=yes]]></content>
+    <title>Monitor Gerrit server error_log size</title>
+    <url>/2018/03/26/Monitor-Gerrit-server-error-log-size/</url>
+    <content><![CDATA[<h1 id="Script"><a href="#Script" class="headerlink" title="Script"></a>Script</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Checkout error_log size</span></span><br><span class="line">file=<span class="string">"/home/gerrit2/gerrit-2.14.7/logs/error_log"</span></span><br><span class="line">maxsize=1000    <span class="comment"># 1000 kilobytes</span></span><br><span class="line">actualsize=$(du -k <span class="string">"<span class="variable">$file</span>"</span> | cut -f1)</span><br><span class="line"><span class="keyword">if</span> [ <span class="variable">$actualsize</span> -ge <span class="variable">$maxsize</span> ]; <span class="keyword">then</span></span><br><span class="line">    <span class="built_in">echo</span> size is over <span class="variable">$maxsize</span> kilobytes</span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"Gerrit error_log size is over <span class="variable">$maxsize</span> kilobytes"</span> | mutt -s <span class="string">"Gerrit error_log size warning!"</span> -c baternest@gmail.com</span><br><span class="line">    <span class="built_in">exit</span></span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">    <span class="built_in">echo</span> size is under <span class="variable">$maxsize</span> kilobytes</span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Install-package"><a href="#Install-package" class="headerlink" title="Install package"></a>Install package</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get install msmtp</span><br><span class="line">sudo apt-get install mutt</span><br></pre></td></tr></table></figure>
+
+<h3 id="Configuration"><a href="#Configuration" class="headerlink" title="Configuration"></a>Configuration</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vi /etc/msmtprc</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vi ~/.muttrc</span><br><span class="line"></span><br><span class="line"><span class="built_in">set</span> sendmail=<span class="string">"/usr/bin/msmtp"</span></span><br><span class="line"><span class="built_in">set</span> use_from=yes</span><br><span class="line"><span class="built_in">set</span> realname=<span class="string">"gerrit2@server.vm"</span></span><br><span class="line"><span class="built_in">set</span> from=gerrit2@server.vm</span><br><span class="line"><span class="built_in">set</span> envelope_from=yes</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>Script</category>
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[Cpp explicit]]></title>
-    <url>%2F2018%2F03%2F13%2FCpp-explicit%2F</url>
-    <content type="text"><![CDATA[C++ keyword ‘explicit’Conversions can either be explicit—when the programmer calls for one type to be converted to another, as in a cast or direct initialization—or implicit—when the language or program calls for a different type than the one given by the programmer. MSDN: The explicit keyword and problems with implicit conversion Wikibooks, open books for an open world: More C++ Idioms/Safe bool cppreference.com: explicit 指定符]]></content>
+    <title>Cpp explicit</title>
+    <url>/2018/03/13/Cpp-explicit/</url>
+    <content><![CDATA[<h1 id="C-keyword-‘explicit’"><a href="#C-keyword-‘explicit’" class="headerlink" title="C++ keyword ‘explicit’"></a>C++ keyword ‘explicit’</h1><p>Conversions can either be <strong><em>explicit</em></strong>—when the programmer calls for one type to be converted to another, as in a cast or direct initialization—or <strong><em>implicit</em></strong>—when the language or program calls for a different type than the one given by the programmer.</p>
+<p>MSDN: <a href="https://msdn.microsoft.com/en-us/library/wwywka61.aspx" target="_blank" rel="noopener">The explicit keyword and problems with implicit conversion</a></p>
+<p>Wikibooks, open books for an open world: <a href="https://en.wikibooks.org/wiki/More_C%2B%2B_Idioms/Safe_bool" target="_blank" rel="noopener">More C++ Idioms/Safe bool</a></p>
+<p>cppreference.com: <a href="http://zh.cppreference.com/mwiki/index.php?title=cpp/language/explicit&variant=zh-hant" target="_blank" rel="noopener">explicit 指定符</a></p>
+]]></content>
       <categories>
         <category>C++</category>
       </categories>
@@ -103,14 +200,34 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Test Post]]></title>
-    <url>%2F2018%2F02%2F23%2FTest-Post%2F</url>
-    <content type="text"><![CDATA[Test Post onlyTest Disqus]]></content>
+    <title>Test Post</title>
+    <url>/2018/02/23/Test-Post/</url>
+    <content><![CDATA[<h1 id="Test-Post-only"><a href="#Test-Post-only" class="headerlink" title="Test Post only"></a>Test Post only</h1><h2 id="Test-Disqus"><a href="#Test-Disqus" class="headerlink" title="Test Disqus"></a>Test Disqus</h2><img src="/2018/02/23/Test-Post/test.jpg" title="[Image Title]">]]></content>
   </entry>
   <entry>
-    <title><![CDATA[Environment Setup]]></title>
-    <url>%2F2018%2F02%2F22%2FEnvironment-Setup%2F</url>
-    <content type="text"><![CDATA[Setup environment for write down note (Windows)Prerequisite Install Git for Windows (Git Bash) Install Node.js (not necessary, but recommended) Install Visual Studio Code as markdown editor Install hexo (if node.js installed)1npm install hexo-cli -g Clone GitHub repository and checkout source branch123git clone git@github.com:Baternest/baternest.github.io.git -b source --recursivecd baternest.github.io.gitnpm install hexo --save Set author info12git config user.name "Luo ZhengHong"git config user.email "baternest@gmail.com" Create a new post1hexo new "My New Post" or create markdown file into source/_post folder Just commit and push to GitHub123git addgit commitgit push Travis-CI wll auto generate and deploy to https://baternest.github.io]]></content>
+    <title>Environment Setup</title>
+    <url>/2018/02/22/Environment-Setup/</url>
+    <content><![CDATA[<h1 id="Setup-environment-for-write-down-note-Windows"><a href="#Setup-environment-for-write-down-note-Windows" class="headerlink" title="Setup environment for write down note (Windows)"></a>Setup environment for write down note (Windows)</h1><h2 id="Prerequisite"><a href="#Prerequisite" class="headerlink" title="Prerequisite"></a>Prerequisite</h2><ul>
+<li><p>Install <a href="https://git-scm.com/download/win" target="_blank" rel="noopener">Git for Windows</a> (Git Bash)</p>
+</li>
+<li><p>Install <a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a> (not necessary, but recommended)</p>
+</li>
+<li><p>Install <a href="https://code.visualstudio.com/download" target="_blank" rel="noopener">Visual Studio Code</a> as markdown editor</p>
+</li>
+</ul>
+<h2 id="Install-hexo-if-node-js-installed"><a href="#Install-hexo-if-node-js-installed" class="headerlink" title="Install hexo (if node.js installed)"></a>Install hexo (if node.js installed)</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
+
+<h2 id="Clone-GitHub-repository-and-checkout-source-branch"><a href="#Clone-GitHub-repository-and-checkout-source-branch" class="headerlink" title="Clone GitHub repository and checkout source branch"></a>Clone GitHub repository and checkout source branch</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@github.com:Baternest/baternest.github.io.git -b <span class="built_in">source</span> --recursive</span><br><span class="line"><span class="built_in">cd</span> baternest.github.io.git</span><br><span class="line">npm install hexo --save</span><br></pre></td></tr></table></figure>
+
+<h2 id="Set-author-info"><a href="#Set-author-info" class="headerlink" title="Set author info"></a>Set author info</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config user.name <span class="string">"Luo ZhengHong"</span></span><br><span class="line">git config user.email <span class="string">"baternest@gmail.com"</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+
+<p>or create markdown file into source/_post folder</p>
+<h3 id="Just-commit-and-push-to-GitHub"><a href="#Just-commit-and-push-to-GitHub" class="headerlink" title="Just commit and push to GitHub"></a>Just commit and push to GitHub</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git add</span><br><span class="line">git commit</span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://travis-ci.org/Baternest/baternest.github.io" target="_blank" rel="noopener">Travis-CI</a> wll auto generate and deploy to <a href="https://baternest.github.io">https://baternest.github.io</a></p>
+]]></content>
       <categories>
         <category>Blog</category>
       </categories>

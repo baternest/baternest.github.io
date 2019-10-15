@@ -103,17 +103,17 @@
   <meta name="keywords" content="Hexo, NexT">
 
 
-<meta name="description" content="To upgrade all of the packages, LEDE recommends,1opkg list-upgradable | cut -f 1 -d &amp;apos; &amp;apos; | xargs opkg upgrade opkg install kmod-usb-storageopkg install usbutilslsusb -t opkg install block-mou">
+<meta name="description" content="To upgrade all of the packages, LEDE recommends,1opkg list-upgradable | cut -f 1 -d &amp;apos; &amp;apos; | xargs opkg upgrade  opkg install kmod-usb-storageopkg install usbutilslsusb -t opkg install block-mo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="OpenWrt LEDE">
 <meta property="og:url" content="https://baternest.github.io/2018/06/01/OpenWrt-LEDE/index.html">
 <meta property="og:site_name" content="Baternest&#39;s blog">
-<meta property="og:description" content="To upgrade all of the packages, LEDE recommends,1opkg list-upgradable | cut -f 1 -d &amp;apos; &amp;apos; | xargs opkg upgrade opkg install kmod-usb-storageopkg install usbutilslsusb -t opkg install block-mou">
+<meta property="og:description" content="To upgrade all of the packages, LEDE recommends,1opkg list-upgradable | cut -f 1 -d &amp;apos; &amp;apos; | xargs opkg upgrade  opkg install kmod-usb-storageopkg install usbutilslsusb -t opkg install block-mo">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-09-02T08:23:25.588Z">
+<meta property="og:updated_time" content="2019-10-15T02:28:32.223Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="OpenWrt LEDE">
-<meta name="twitter:description" content="To upgrade all of the packages, LEDE recommends,1opkg list-upgradable | cut -f 1 -d &amp;apos; &amp;apos; | xargs opkg upgrade opkg install kmod-usb-storageopkg install usbutilslsusb -t opkg install block-mou">
+<meta name="twitter:description" content="To upgrade all of the packages, LEDE recommends,1opkg list-upgradable | cut -f 1 -d &amp;apos; &amp;apos; | xargs opkg upgrade  opkg install kmod-usb-storageopkg install usbutilslsusb -t opkg install block-mo">
 
 
 
@@ -376,6 +376,7 @@
 
       
         <h1 id="To-upgrade-all-of-the-packages-LEDE-recommends"><a href="#To-upgrade-all-of-the-packages-LEDE-recommends" class="headerlink" title="To upgrade all of the packages, LEDE recommends,"></a>To upgrade all of the packages, LEDE recommends,</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">opkg list-upgradable | cut -f 1 -d &apos; &apos; | xargs opkg upgrade</span><br></pre></td></tr></table></figure>
+
 <p>opkg install kmod-usb-storage<br>opkg install usbutils<br>lsusb -t</p>
 <p>opkg install block-mount<br>block info | grep “/dev/sd”</p>
 <p>opkg install kmod-fs-ext4<br>block detect &gt; /etc/config/fstab</p>

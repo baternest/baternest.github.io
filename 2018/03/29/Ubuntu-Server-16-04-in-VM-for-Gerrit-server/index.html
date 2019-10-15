@@ -103,18 +103,18 @@
   <meta name="keywords" content="Server,">
 
 
-<meta name="description" content="Install Ubuntu Server 16.04 in VMware Workstation 14 PlayerInstall Packages123sudo apt-get updatesudo apt-get install openssh-serversudo apt-get install open-vm-tools 12sudo mkdir /mnt/hgfssudo vmhgfs">
+<meta name="description" content="Install Ubuntu Server 16.04 in VMware Workstation 14 PlayerInstall Packages123sudo apt-get updatesudo apt-get install openssh-serversudo apt-get install open-vm-tools  12sudo mkdir /mnt/hgfssudo vmhgf">
 <meta name="keywords" content="Server">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ubuntu Server 16.04 in VM for Gerrit server">
 <meta property="og:url" content="https://baternest.github.io/2018/03/29/Ubuntu-Server-16-04-in-VM-for-Gerrit-server/index.html">
 <meta property="og:site_name" content="Baternest&#39;s blog">
-<meta property="og:description" content="Install Ubuntu Server 16.04 in VMware Workstation 14 PlayerInstall Packages123sudo apt-get updatesudo apt-get install openssh-serversudo apt-get install open-vm-tools 12sudo mkdir /mnt/hgfssudo vmhgfs">
+<meta property="og:description" content="Install Ubuntu Server 16.04 in VMware Workstation 14 PlayerInstall Packages123sudo apt-get updatesudo apt-get install openssh-serversudo apt-get install open-vm-tools  12sudo mkdir /mnt/hgfssudo vmhgf">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-09-02T08:23:25.588Z">
+<meta property="og:updated_time" content="2019-10-15T02:28:32.223Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ubuntu Server 16.04 in VM for Gerrit server">
-<meta name="twitter:description" content="Install Ubuntu Server 16.04 in VMware Workstation 14 PlayerInstall Packages123sudo apt-get updatesudo apt-get install openssh-serversudo apt-get install open-vm-tools 12sudo mkdir /mnt/hgfssudo vmhgfs">
+<meta name="twitter:description" content="Install Ubuntu Server 16.04 in VMware Workstation 14 PlayerInstall Packages123sudo apt-get updatesudo apt-get install openssh-serversudo apt-get install open-vm-tools  12sudo mkdir /mnt/hgfssudo vmhgf">
 
 
 
@@ -395,11 +395,17 @@
 
       
         <h1 id="Install-Ubuntu-Server-16-04-in-VMware-Workstation-14-Player"><a href="#Install-Ubuntu-Server-16-04-in-VMware-Workstation-14-Player" class="headerlink" title="Install Ubuntu Server 16.04 in VMware Workstation 14 Player"></a>Install Ubuntu Server 16.04 in VMware Workstation 14 Player</h1><h2 id="Install-Packages"><a href="#Install-Packages" class="headerlink" title="Install Packages"></a>Install Packages</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install openssh-server</span><br><span class="line">sudo apt-get install open-vm-tools</span><br></pre></td></tr></table></figure>
+
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir /mnt/hgfs</span><br><span class="line">sudo vmhgfs-fuse .host:/$(vmware-hgfsclient) /mnt/hgfs/ -o allow_other</span><br></pre></td></tr></table></figure>
+
 <h3 id="Mount"><a href="#Mount" class="headerlink" title="Mount"></a>Mount</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vmhgfs-fuse .host:/$(vmware-hgfsclient) ~/some_mountpoint</span><br><span class="line">sudo mount -t fuse.vmhgfs-fuse .host:/ /mnt/hgfs -o allow_other</span><br></pre></td></tr></table></figure>
+
 <h3 id="Mount-1"><a href="#Mount-1" class="headerlink" title="Mount"></a>Mount</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.host:/ /mnt/hgfs fuse.vmhgfs-fuse allow_other 0 0</span><br></pre></td></tr></table></figure>
+
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install default-jre</span><br><span class="line">sudo apt-get install apache2 postgresql</span><br></pre></td></tr></table></figure>
+
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo su postgres</span><br><span class="line">createuser --username=postgres -RDIElPS gerrit2</span><br><span class="line">createdb --username=postgres -E UTF-8 -O gerrit2 reviewdb</span><br></pre></td></tr></table></figure>
+
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -jar gerrit.war init -d /path/to/your/gerrit_application_directory</span><br></pre></td></tr></table></figure>
       
     </div>
