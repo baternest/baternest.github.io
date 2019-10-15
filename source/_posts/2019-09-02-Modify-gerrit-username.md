@@ -17,4 +17,4 @@ echo -n "username:your_id" | sha1sum
 git mv old
 git add
 git commit -m
-git push origin refs/meta/external-ids
+git push origin HEAD:refs/meta/external-ids
