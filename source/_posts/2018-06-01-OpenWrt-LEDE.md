@@ -26,3 +26,8 @@ block detect > /etc/config/fstab
 opkg update
 opkg install samba36-server luci-app-samba
 ```
+
+# DHCP Client DNS
+``` ash
+cat /tmp/resolv.conf.auto
+```
