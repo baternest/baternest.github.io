@@ -1,5 +1,5 @@
 # Baternest's blog
 
-[![Build Status](https://travis-ci.org/Baternest/baternest.github.io.svg?branch=source)](https://travis-ci.org/Baternest/baternest.github.io)
+![pages workflow](https://github.com/baternest/baternest.github.io/actions/workflows/pages.yml/badge.svg)
 
 Link: [Baternest's blog](https://baternest.github.io)
