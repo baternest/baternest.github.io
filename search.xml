@@ -247,9 +247,9 @@
     <title>SSL Tunneling</title>
     <url>/2019/09/19/SSL-Tunneling/</url>
     <content><![CDATA[<p><a href="https://www.youtube.com/watch?v=AtuAdk4MwWw">https://www.youtube.com/watch?v=AtuAdk4MwWw</a></p>
-<p>“Local” Port Forwarding or “Local” Tunneling<br>ssh -L 8181:192.168.0.135:3389 <a href="mailto:&#x70;&#x69;&#64;&#49;&#57;&#x32;&#x2e;&#49;&#x36;&#x38;&#x2e;&#x30;&#x2e;&#49;&#51;&#x35;">&#x70;&#x69;&#64;&#49;&#57;&#x32;&#x2e;&#49;&#x36;&#x38;&#x2e;&#x30;&#x2e;&#49;&#51;&#x35;</a></p>
-<p>“Dynamic” Port Forwarding or “Dynamic” Tunneling<br>ssh -D 8181 <a href="mailto:&#112;&#105;&#x40;&#49;&#x39;&#x32;&#46;&#49;&#54;&#56;&#46;&#x30;&#x2e;&#49;&#x33;&#x35;">&#112;&#105;&#x40;&#49;&#x39;&#x32;&#46;&#49;&#54;&#56;&#46;&#x30;&#x2e;&#49;&#x33;&#x35;</a></p>
-<p>“Reverse” Port Forwarding<br>ssh -R 8181:localhost:3389 <a href="mailto:&#112;&#105;&#x40;&#49;&#57;&#x32;&#46;&#49;&#x36;&#x38;&#x2e;&#x30;&#x2e;&#49;&#x33;&#x35;">&#112;&#105;&#x40;&#49;&#57;&#x32;&#46;&#49;&#x36;&#x38;&#x2e;&#x30;&#x2e;&#49;&#x33;&#x35;</a></p>
+<p>“Local” Port Forwarding or “Local” Tunneling<br>ssh -L 8181:192.168.0.135:3389 <a href="mailto:&#112;&#105;&#x40;&#49;&#x39;&#x32;&#46;&#49;&#x36;&#56;&#46;&#x30;&#x2e;&#x31;&#51;&#x35;">&#112;&#105;&#x40;&#49;&#x39;&#x32;&#46;&#49;&#x36;&#56;&#46;&#x30;&#x2e;&#x31;&#51;&#x35;</a></p>
+<p>“Dynamic” Port Forwarding or “Dynamic” Tunneling<br>ssh -D 8181 <a href="mailto:&#x70;&#105;&#64;&#49;&#57;&#x32;&#x2e;&#49;&#54;&#56;&#x2e;&#48;&#x2e;&#x31;&#x33;&#53;">&#x70;&#105;&#64;&#49;&#57;&#x32;&#x2e;&#49;&#54;&#56;&#x2e;&#48;&#x2e;&#x31;&#x33;&#53;</a></p>
+<p>“Reverse” Port Forwarding<br>ssh -R 8181:localhost:3389 <a href="mailto:&#112;&#x69;&#x40;&#49;&#x39;&#x32;&#x2e;&#x31;&#54;&#56;&#x2e;&#x30;&#46;&#49;&#x33;&#53;">&#112;&#x69;&#x40;&#49;&#x39;&#x32;&#x2e;&#x31;&#54;&#56;&#x2e;&#x30;&#46;&#49;&#x33;&#53;</a></p>
 <p>/etc/ssh/sshd_config<br>AllowTcpForwarding yes<br>GatewayPorts yes</p>
 ]]></content>
   </entry>
